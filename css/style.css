@@ -802,7 +802,72 @@ h1, h2, h3, h4, h5, h6 {
 .scooter-tagline {
   font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.9rem;
+}
+
+/* ==========================================================================
+   Product Card Interactive Battery Toggle Switcher
+   ========================================================================== */
+.card-battery-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.35rem 0.25rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-battery-toggle-lbl {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.card-battery-toggle {
+  display: inline-flex;
+  background: rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-full);
+  padding: 2px;
+  gap: 2px;
+}
+
+.card-battery-btn {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.card-battery-btn:hover {
+  color: var(--text-main);
+}
+
+.card-battery-btn.active[data-battery="lithium"],
+.card-battery-btn.active[data-type="lithium"] {
+  background: #ffffff;
+  color: #166534;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(22, 101, 52, 0.15);
+}
+
+.card-battery-btn.active[data-battery="graphene"],
+.card-battery-btn.active[data-type="graphene"] {
+  background: #ffffff;
+  color: #0369a1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(3, 105, 161, 0.15);
 }
 
 .scooter-specs-pills {
@@ -820,11 +885,18 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.82rem;
+  min-height: 50px;
+  box-sizing: border-box;
 }
 
 .spec-pill-icon {
   color: var(--primary);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.spec-pill-text {
+  flex-grow: 1;
 }
 
 .spec-pill-text strong {
@@ -832,11 +904,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--text-main);
   line-height: 1.2;
+  transition: color var(--transition-fast);
 }
 
 .spec-pill-text span {
   font-size: 0.72rem;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .card-footer {
@@ -1218,6 +1292,269 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
+}
+
+/* ==========================================================================
+   Dual Battery Selector & Comparison Styles
+   ========================================================================== */
+.pdp-battery-selection-wrap {
+  margin-bottom: 2rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.battery-select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.battery-select-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.battery-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.battery-opt-btn {
+  border: 2px solid var(--border-color);
+  background: var(--bg-surface-alt);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.battery-opt-btn:hover {
+  border-color: rgba(46, 178, 76, 0.5);
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.battery-opt-btn.active {
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px var(--primary-glow), var(--shadow-md);
+}
+
+.battery-opt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.battery-opt-badge.lithium-badge {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.battery-opt-badge.graphene-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.battery-opt-name {
+  font-size: 1.08rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.battery-check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  transition: background var(--transition-fast);
+}
+
+.battery-opt-btn.active .battery-check-icon {
+  background: var(--primary);
+}
+
+.battery-opt-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.battery-opt-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.battery-opt-spec-item strong {
+  color: var(--text-main);
+}
+
+/* Quick specs row on PDP */
+.pdp-quick-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.8rem;
+}
+
+.pdp-quick-spec-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 0.6rem;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.pdp-quick-spec-card.highlight {
+  background: var(--primary-light);
+  border-color: rgba(46, 178, 76, 0.3);
+}
+
+.pdp-quick-spec-icon {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.pdp-quick-spec-val {
+  font-size: 1.05rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.pdp-quick-spec-lbl {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+/* Battery Comparison Section */
+.battery-compare-box {
+  margin-top: 2.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.battery-compare-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-main);
+}
+
+.battery-compare-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.battery-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.battery-compare-table th {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.battery-compare-table th.lithium-th {
+  background: #14532d;
+  color: #86efac;
+}
+
+.battery-compare-table th.graphene-th {
+  background: #075985;
+  color: #7dd3fc;
+}
+
+.battery-compare-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.battery-compare-table tr:nth-child(even) td {
+  background: var(--bg-surface-alt);
+}
+
+.battery-compare-table td.feature-lbl {
+  font-weight: 700;
+  color: var(--text-main);
+  width: 32%;
+}
+
+.battery-compare-table td.lithium-val {
+  font-weight: 600;
+  color: #15803d;
+}
+
+.battery-compare-table td.graphene-val {
+  font-weight: 600;
+  color: #0369a1;
+}
+
+@media (max-width: 640px) {
+  .battery-options-grid {
+    grid-template-columns: 1fr;
+  }
+  .pdp-quick-specs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* ==========================================================================
@@ -1810,3 +2147,254 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
   }
 }
+
+/* ==========================================================================
+   Doorstep Services Showcase (Home Delivery & Home Service)
+   ========================================================================== */
+.doorstep-section {
+  position: relative;
+  background: linear-gradient(180deg, #09131f 0%, #0c2015 50%, #09131f 100%);
+  color: var(--text-white);
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.doorstep-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(46, 178, 76, 0.18) 0%, rgba(46, 178, 76, 0) 70%);
+  pointer-events: none;
+}
+
+.doorstep-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 70%);
+  pointer-events: none;
+}
+
+.doorstep-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.doorstep-card {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.3);
+}
+
+.doorstep-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(46, 178, 76, 0.5);
+  box-shadow: 0 25px 45px -10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(46, 178, 76, 0.2);
+}
+
+.doorstep-card.delivery-card {
+  border-top: 4px solid #3b82f6;
+}
+
+.doorstep-card.delivery-card:hover {
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 25px 45px -10px rgba(0, 0, 0, 0.5), 0 0 25px rgba(59, 130, 246, 0.2);
+}
+
+.doorstep-card.service-card {
+  border-top: 4px solid var(--primary);
+}
+
+.doorstep-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.doorstep-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.doorstep-card.delivery-card .doorstep-icon-badge {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.doorstep-card.service-card .doorstep-icon-badge {
+  background: linear-gradient(135deg, rgba(46, 178, 76, 0.25) 0%, rgba(27, 122, 50, 0.15) 100%);
+  border-color: rgba(46, 178, 76, 0.35);
+}
+
+.doorstep-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.doorstep-tag.blue {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.doorstep-tag.green {
+  background: rgba(46, 178, 76, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(46, 178, 76, 0.35);
+}
+
+.doorstep-card-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.doorstep-card-desc {
+  color: #cbd5e1;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.doorstep-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.doorstep-feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.doorstep-check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(46, 178, 76, 0.2);
+  color: #4ade80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.doorstep-feature-content strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.doorstep-feature-content span {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.doorstep-card-footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.doorstep-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+/* Service promo banner for Catalog / Shop page */
+.doorstep-promo-banner {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(12, 32, 21, 0.95) 100%);
+  border: 1px solid rgba(46, 178, 76, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.doorstep-promo-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.doorstep-promo-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.doorstep-promo-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.doorstep-promo-sub {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .doorstep-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .doorstep-card {
+    padding: 1.75rem 1.25rem;
+  }
+}
+

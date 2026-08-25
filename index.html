@@ -15,11 +15,11 @@
   <div class="header-topbar">
     <div class="container header-topbar-inner">
       <div class="topbar-badge">
-        <span>⚡</span> Official Dealership of Urban eBikes | Non-RTO &amp; No License Required
+        <span>⚡</span> Official Dealership of Urban eBikes | 🚚 Doorstep Delivery &amp; 🛠️ Home Service Available
       </div>
       <div class="topbar-contact">
         <a href="tel:+919072430473">📞 +91 90724 30473</a>
-        <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20am%20interested%20in%20Urban%20eBikes%20electric%20scooters." target="_blank">💬 WhatsApp Support</a>
+        <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20am%20interested%20in%20Urban%20eBikes%20electric%20scooters%20and%20home%20delivery/service." target="_blank">💬 WhatsApp Support</a>
         <span>📍 Showroom Open 9 AM - 8 PM</span>
       </div>
     </div>
@@ -77,7 +77,8 @@
         <div class="hero-badge-row">
           <span class="hero-badge highlight">⚡ 100% Street Legal</span>
           <span class="hero-badge">🚫 No License Required</span>
-          <span class="hero-badge">📄 No RTO Registration</span>
+          <span class="hero-badge">🚚 Doorstep Home Delivery</span>
+          <span class="hero-badge">🛠️ Doorstep Home Service</span>
         </div>
 
         <h1 class="hero-title">
@@ -122,16 +123,16 @@
           <div class="hero-feature-bubble top-right">
             <div class="bubble-icon">⚡</div>
             <div>
-              <div class="bubble-title">110 KM Range</div>
-              <div class="bubble-sub">Fast 3.5h Charging</div>
+              <div class="bubble-title">80 - 110 KM Range</div>
+              <div class="bubble-sub">Fast 3.5h Lithium Charging</div>
             </div>
           </div>
 
           <div class="hero-feature-bubble bottom-left">
             <div class="bubble-icon">🛡️</div>
             <div>
-              <div class="bubble-title">3 Years Warranty</div>
-              <div class="bubble-sub">Smart Battery Pack</div>
+              <div class="bubble-title">Up to 3 Years Warranty</div>
+              <div class="bubble-sub">Lithium &amp; Graphene Options</div>
             </div>
           </div>
         </div>
@@ -169,23 +170,23 @@
           <div class="usp-icon-box">💰</div>
           <h3 class="usp-title">₹0.15/km Ultra-Low Running Cost</h3>
           <p class="usp-desc">
-            A full charge costs less than 1.2 units of domestic electricity (~₹8). Travel up to 85–110 km per charge and save over <strong>₹30,000+ per year</strong> compared to petrol scooters.
+            A full charge costs less than 1.2 units of domestic electricity (~₹8). Travel up to 80–110 km per charge and save over <strong>₹30,000+ per year</strong> compared to petrol scooters.
           </p>
         </div>
 
         <div class="usp-card">
-          <div class="usp-icon-box">🔌</div>
-          <h3 class="usp-title">Portable Home Wall Charging</h3>
+          <div class="usp-icon-box">🔋</div>
+          <h3 class="usp-title">Dual Battery Choices (Lithium &amp; Graphene)</h3>
           <p class="usp-desc">
-            Lightweight detachable lithium batteries allow you to charge inside your home, apartment, or office using any standard 5A / 3-pin wall socket in just 3 to 4 hours.
+            Choose high-performance <strong>Lithium Battery</strong> (Fast 3.5h charge, 3-year warranty) or cost-effective heavy-duty <strong>Graphene Battery</strong> (1-year warranty) on every model.
           </p>
         </div>
 
         <div class="usp-card">
           <div class="usp-icon-box">🛡️</div>
-          <h3 class="usp-title">3-Year Battery Warranty</h3>
+          <h3 class="usp-title">Up to 3-Year Battery Warranty</h3>
           <p class="usp-desc">
-            Every Urban Bikes model sold at NJ Motors comes with up to 3 years of comprehensive battery warranty and authorized dealership support for complete peace of mind.
+            Every Urban Bikes model sold at NJ Motors comes with comprehensive warranty support (3 Years on Lithium / 1 Year on Graphene) and authorized dealership service.
           </p>
         </div>
 
@@ -216,26 +217,48 @@
 
       <div class="scooter-grid">
         <!-- Card 1: Urban Legend -->
-        <div class="scooter-card">
+        <div class="scooter-card" id="card-urban-legend">
           <div class="card-badge-top">
             <span class="scooter-badge">Best Seller</span>
           </div>
           <div class="scooter-img-box">
-            <a href="product.html?id=urban-legend">
+            <a href="product.html?id=urban-legend&battery=lithium" class="card-details-btn">
               <img src="assets/images/legend-maroon.png" alt="Urban Legend Electric Scooter" class="scooter-img" />
             </a>
           </div>
           <div class="card-body">
-            <h3 class="scooter-name"><a href="product.html?id=urban-legend">Urban Legend</a></h3>
+            <h3 class="scooter-name"><a href="product.html?id=urban-legend&battery=lithium" class="card-details-btn">Urban Legend</a></h3>
             <p class="scooter-tagline">The Everyday Smart City Rider</p>
+
+            <!-- Interactive Battery Type Switcher -->
+            <div class="card-battery-toggle-wrap">
+              <span class="card-battery-toggle-lbl">🔋 Battery:</span>
+              <div class="card-battery-toggle" role="group" aria-label="Select Battery Variant">
+                <button type="button" class="card-battery-btn active" data-battery="lithium" title="Switch to Lithium" onclick="toggleCardBattery(event, 'urban-legend', 'lithium')">
+                  ⚡ Lithium
+                </button>
+                <button type="button" class="card-battery-btn" data-battery="graphene" title="Switch to Graphene" onclick="toggleCardBattery(event, 'urban-legend', 'graphene')">
+                  🔋 Graphene
+                </button>
+              </div>
+            </div>
+
             <div class="scooter-specs-pills">
-              <div class="spec-pill">
+              <div class="spec-pill spec-pill-range">
                 <span class="spec-pill-icon">⚡</span>
-                <div class="spec-pill-text"><strong>85 km</strong><span>Certified Range</span></div>
+                <div class="spec-pill-text"><strong>80 - 110 km</strong><span>Certified Range</span></div>
+              </div>
+              <div class="spec-pill spec-pill-charge">
+                <span class="spec-pill-icon">🔌</span>
+                <div class="spec-pill-text"><strong>3.5 - 4 Hours</strong><span>⚡ Fast Charging</span></div>
+              </div>
+              <div class="spec-pill spec-pill-warranty">
+                <span class="spec-pill-icon">🛡️</span>
+                <div class="spec-pill-text"><strong>3 Years</strong><span>Lithium Warranty</span></div>
               </div>
               <div class="spec-pill">
-                <span class="spec-pill-icon">🔋</span>
-                <div class="spec-pill-text"><strong>3.5 Hours</strong><span>Fast Charge</span></div>
+                <span class="spec-pill-icon">🚀</span>
+                <div class="spec-pill-text"><strong>25 km/h</strong><span>Non-RTO Legal</span></div>
               </div>
             </div>
             <div class="card-footer">
@@ -244,34 +267,56 @@
                 <span class="price-val">₹54,999</span>
               </div>
               <div class="card-actions">
-                <a href="product.html?id=urban-legend" class="btn btn-outline btn-sm">Details</a>
-                <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20want%20to%20inquire%20about%20the%20Urban%20Legend%20(Price:%20₹54,999)" class="btn btn-whatsapp btn-sm" target="_blank">Inquire</a>
+                <a href="product.html?id=urban-legend&battery=lithium" class="btn btn-outline btn-sm card-details-btn">Details</a>
+                <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20want%20to%20inquire%20about%20the%20Urban%20eBikes%20Urban%20Legend%20with%20Lithium%20Battery%20(Price:%20₹54,999,%20Range:%2080-110%20km)" class="btn btn-whatsapp btn-sm card-inquire-btn" target="_blank">Inquire</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Card 2: Urban Phantom+ -->
-        <div class="scooter-card">
+        <div class="scooter-card" id="card-urban-phantom-plus">
           <div class="card-badge-top">
             <span class="scooter-badge">Max Range</span>
           </div>
           <div class="scooter-img-box">
-            <a href="product.html?id=urban-phantom-plus">
+            <a href="product.html?id=urban-phantom-plus&battery=lithium" class="card-details-btn">
               <img src="assets/images/phantom-plus.png" alt="Urban Phantom+ Electric Scooter" class="scooter-img" />
             </a>
           </div>
           <div class="card-body">
-            <h3 class="scooter-name"><a href="product.html?id=urban-phantom-plus">Urban Phantom+</a></h3>
-            <p class="scooter-tagline">Feel The Wild Speed with 110km Range</p>
+            <h3 class="scooter-name"><a href="product.html?id=urban-phantom-plus&battery=lithium" class="card-details-btn">Urban Phantom+</a></h3>
+            <p class="scooter-tagline">Feel The Wild Speed with Up to 110km Range</p>
+
+            <!-- Interactive Battery Type Switcher -->
+            <div class="card-battery-toggle-wrap">
+              <span class="card-battery-toggle-lbl">🔋 Battery:</span>
+              <div class="card-battery-toggle" role="group" aria-label="Select Battery Variant">
+                <button type="button" class="card-battery-btn active" data-battery="lithium" title="Switch to Lithium" onclick="toggleCardBattery(event, 'urban-phantom-plus', 'lithium')">
+                  ⚡ Lithium
+                </button>
+                <button type="button" class="card-battery-btn" data-battery="graphene" title="Switch to Graphene" onclick="toggleCardBattery(event, 'urban-phantom-plus', 'graphene')">
+                  🔋 Graphene
+                </button>
+              </div>
+            </div>
+
             <div class="scooter-specs-pills">
-              <div class="spec-pill">
+              <div class="spec-pill spec-pill-range">
                 <span class="spec-pill-icon">⚡</span>
-                <div class="spec-pill-text"><strong>110 km</strong><span>Certified Range</span></div>
+                <div class="spec-pill-text"><strong>80 - 110 km</strong><span>Certified Range</span></div>
+              </div>
+              <div class="spec-pill spec-pill-charge">
+                <span class="spec-pill-icon">🔌</span>
+                <div class="spec-pill-text"><strong>4 - 4.5 Hours</strong><span>⚡ Fast Charging</span></div>
+              </div>
+              <div class="spec-pill spec-pill-warranty">
+                <span class="spec-pill-icon">🛡️</span>
+                <div class="spec-pill-text"><strong>3 Years</strong><span>Lithium Warranty</span></div>
               </div>
               <div class="spec-pill">
-                <span class="spec-pill-icon">🔋</span>
-                <div class="spec-pill-text"><strong>12-inch Alloy</strong><span>Big Wheels</span></div>
+                <span class="spec-pill-icon">🚀</span>
+                <div class="spec-pill-text"><strong>25 km/h</strong><span>Non-RTO Legal</span></div>
               </div>
             </div>
             <div class="card-footer">
@@ -280,34 +325,56 @@
                 <span class="price-val">₹68,999</span>
               </div>
               <div class="card-actions">
-                <a href="product.html?id=urban-phantom-plus" class="btn btn-outline btn-sm">Details</a>
-                <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20want%20to%20inquire%20about%20the%20Urban%20Phantom+%20(Price:%20₹68,999)" class="btn btn-whatsapp btn-sm" target="_blank">Inquire</a>
+                <a href="product.html?id=urban-phantom-plus&battery=lithium" class="btn btn-outline btn-sm card-details-btn">Details</a>
+                <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20want%20to%20inquire%20about%20the%20Urban%20eBikes%20Urban%20Phantom+%20with%20Lithium%20Battery%20(Price:%20₹68,999,%20Range:%2080-110%20km)" class="btn btn-whatsapp btn-sm card-inquire-btn" target="_blank">Inquire</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Card 3: Urban Fusion -->
-        <div class="scooter-card">
+        <div class="scooter-card" id="card-urban-fusion">
           <div class="card-badge-top">
             <span class="scooter-badge">Popular Sport</span>
           </div>
           <div class="scooter-img-box">
-            <a href="product.html?id=urban-fusion">
+            <a href="product.html?id=urban-fusion&battery=lithium" class="card-details-btn">
               <img src="assets/images/fusion-red.png" alt="Urban Fusion Electric Scooter" class="scooter-img" />
             </a>
           </div>
           <div class="card-body">
-            <h3 class="scooter-name"><a href="product.html?id=urban-fusion">Urban Fusion</a></h3>
+            <h3 class="scooter-name"><a href="product.html?id=urban-fusion&battery=lithium" class="card-details-btn">Urban Fusion</a></h3>
             <p class="scooter-tagline">Fusion Of Power &amp; Passion</p>
+
+            <!-- Interactive Battery Type Switcher -->
+            <div class="card-battery-toggle-wrap">
+              <span class="card-battery-toggle-lbl">🔋 Battery:</span>
+              <div class="card-battery-toggle" role="group" aria-label="Select Battery Variant">
+                <button type="button" class="card-battery-btn active" data-battery="lithium" title="Switch to Lithium" onclick="toggleCardBattery(event, 'urban-fusion', 'lithium')">
+                  ⚡ Lithium
+                </button>
+                <button type="button" class="card-battery-btn" data-battery="graphene" title="Switch to Graphene" onclick="toggleCardBattery(event, 'urban-fusion', 'graphene')">
+                  🔋 Graphene
+                </button>
+              </div>
+            </div>
+
             <div class="scooter-specs-pills">
-              <div class="spec-pill">
+              <div class="spec-pill spec-pill-range">
                 <span class="spec-pill-icon">⚡</span>
-                <div class="spec-pill-text"><strong>90 km</strong><span>Certified Range</span></div>
+                <div class="spec-pill-text"><strong>80 - 110 km</strong><span>Certified Range</span></div>
+              </div>
+              <div class="spec-pill spec-pill-charge">
+                <span class="spec-pill-icon">🔌</span>
+                <div class="spec-pill-text"><strong>3.5 - 4 Hours</strong><span>⚡ Fast Charging</span></div>
+              </div>
+              <div class="spec-pill spec-pill-warranty">
+                <span class="spec-pill-icon">🛡️</span>
+                <div class="spec-pill-text"><strong>3 Years</strong><span>Lithium Warranty</span></div>
               </div>
               <div class="spec-pill">
-                <span class="spec-pill-icon">🔋</span>
-                <div class="spec-pill-text"><strong>Disc Brakes</strong><span>Telescopic</span></div>
+                <span class="spec-pill-icon">🚀</span>
+                <div class="spec-pill-text"><strong>25 km/h</strong><span>Non-RTO Legal</span></div>
               </div>
             </div>
             <div class="card-footer">
@@ -316,8 +383,8 @@
                 <span class="price-val">₹58,499</span>
               </div>
               <div class="card-actions">
-                <a href="product.html?id=urban-fusion" class="btn btn-outline btn-sm">Details</a>
-                <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20want%20to%20inquire%20about%20the%20Urban%20Fusion%20(Price:%20₹58,499)" class="btn btn-whatsapp btn-sm" target="_blank">Inquire</a>
+                <a href="product.html?id=urban-fusion&battery=lithium" class="btn btn-outline btn-sm card-details-btn">Details</a>
+                <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20want%20to%20inquire%20about%20the%20Urban%20eBikes%20Urban%20Fusion%20with%20Lithium%20Battery%20(Price:%20₹58,499,%20Range:%2080-110%20km)" class="btn btn-whatsapp btn-sm card-inquire-btn" target="_blank">Inquire</a>
               </div>
             </div>
           </div>
@@ -394,6 +461,119 @@
     </div>
   </section>
 
+  <!-- Doorstep Convenience: Home Delivery & Home Service Showcase Section -->
+  <section class="doorstep-section" id="doorstep-services">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag dark">Premium Doorstep Care</span>
+        <h2 class="section-title white">Zero Hassle: <span style="color: #4ade80;">Home Delivery &amp; Home Service</span></h2>
+        <p class="section-subtitle white">
+          At NJ Motors, we bring the entire dealership experience right to your doorstep. From same-day scooter delivery with complete live demos to periodic at-home maintenance.
+        </p>
+      </div>
+
+      <div class="doorstep-grid">
+        <!-- Card 1: Doorstep Home Delivery -->
+        <div class="doorstep-card delivery-card">
+          <div class="doorstep-card-header">
+            <div class="doorstep-icon-badge">🚚</div>
+            <span class="doorstep-tag blue">Direct Doorstep Handover</span>
+          </div>
+
+          <h3 class="doorstep-card-title">Doorstep Home Delivery</h3>
+          <p class="doorstep-card-desc">
+            Order your favorite Urban eBikes scooter from home or over WhatsApp, and we will safely deliver your brand-new, road-ready scooter straight to your residence.
+          </p>
+
+          <div class="doorstep-features-list">
+            <div class="doorstep-feature-row">
+              <div class="doorstep-check-icon">✓</div>
+              <div class="doorstep-feature-content">
+                <strong>Same-Day / Scheduled Delivery</strong>
+                <span>Fast doorstep transit with complete pre-delivery vehicle safety inspection (PDI).</span>
+              </div>
+            </div>
+
+            <div class="doorstep-feature-row">
+              <div class="doorstep-check-icon">✓</div>
+              <div class="doorstep-feature-content">
+                <strong>Live On-Site Feature Demo</strong>
+                <span>Our EV specialist demonstrates smart keyless controls, reverse gear, and battery charging at your home socket.</span>
+              </div>
+            </div>
+
+            <div class="doorstep-feature-row">
+              <div class="doorstep-check-icon">✓</div>
+              <div class="doorstep-feature-content">
+                <strong>100% Paperless &amp; Zero Waiting</strong>
+                <span>No RTO registration queues. Receive your keys, official invoice, and warranty card instantly at home.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="doorstep-card-footer">
+            <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20want%20to%20order%20an%20Urban%20eBikes%20electric%20scooter%20with%20Doorstep%20Home%20Delivery." class="btn btn-whatsapp btn-block btn-lg" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Book Home Delivery on WhatsApp
+            </a>
+            <div class="doorstep-footer-note">
+              <span>⚡</span> Available across Edavanna, Manjeri, Nilambur &amp; neighboring regions.
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Doorstep Home Service & Maintenance -->
+        <div class="doorstep-card service-card">
+          <div class="doorstep-card-header">
+            <div class="doorstep-icon-badge">🛠️</div>
+            <span class="doorstep-tag green">Certified EV Care</span>
+          </div>
+
+          <h3 class="doorstep-card-title">Doorstep Home Service</h3>
+          <p class="doorstep-card-desc">
+            No need to visit a service center. Our authorized technicians visit your home for scheduled periodic tune-ups, battery diagnostics, and doorstep repairs.
+          </p>
+
+          <div class="doorstep-features-list">
+            <div class="doorstep-feature-row">
+              <div class="doorstep-check-icon">✓</div>
+              <div class="doorstep-feature-content">
+                <strong>Periodic Multi-Point Inspection</strong>
+                <span>Comprehensive checkup of brakes, tire pressure, suspension, throttle response, and lighting at your home.</span>
+              </div>
+            </div>
+
+            <div class="doorstep-feature-row">
+              <div class="doorstep-check-icon">✓</div>
+              <div class="doorstep-feature-content">
+                <strong>On-Site Battery &amp; BMS Diagnostics</strong>
+                <span>Digital voltage health scan, cell balancing check, and charger testing to guarantee maximum battery lifespan.</span>
+              </div>
+            </div>
+
+            <div class="doorstep-feature-row">
+              <div class="doorstep-check-icon">✓</div>
+              <div class="doorstep-feature-content">
+                <strong>Genuine Urban eBikes Spare Parts</strong>
+                <span>Doorstep replacement of authentic brake pads, cables, switches, and electrical spares by certified mechanics.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="doorstep-card-footer">
+            <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20I%20would%20like%20to%20schedule%20a%20Doorstep%20Home%20Service%20visit%20for%20my%20Urban%20eBikes%20scooter." class="btn btn-whatsapp btn-block btn-lg" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Schedule Home Service on WhatsApp
+            </a>
+            <div class="doorstep-footer-note">
+              <span>🔧</span> Quick slot booking with flexible morning and evening visit timings.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Dealership Advantages & Why NJ Motors -->
   <section class="section-padding" style="background-color: #ffffff;">
     <div class="container">
@@ -401,33 +581,33 @@
         <span class="section-tag">NJ Motors Experience</span>
         <h2 class="section-title">Why Buy From <span class="highlight-green">NJ Motors?</span></h2>
         <p class="section-subtitle">
-          As the exclusive authorized dealership for Urban Bikes, we deliver full customer support from free doorstep test rides to swift spot delivery.
+          As the authorized dealership for Urban eBikes, we provide full end-to-end customer support from doorstep test rides to prompt at-home maintenance.
         </p>
       </div>
 
       <div class="usp-grid" style="margin-top: 3rem;">
         <div class="usp-card">
           <div class="usp-icon-box">🛵</div>
-          <h3 class="usp-title">Free Showroom Test Rides</h3>
-          <p class="usp-desc">Take any of the 11 Urban Bikes models for a relaxed test ride at our dealership. Feel the smooth pickup, comfort suspension, and silent ride firsthand.</p>
+          <h3 class="usp-title">Free Showroom &amp; Doorstep Test Rides</h3>
+          <p class="usp-desc">Test ride any Urban eBikes model at our showroom or request a free test ride scheduled directly at your home.</p>
         </div>
 
         <div class="usp-card">
-          <div class="usp-icon-box">⚡</div>
-          <h3 class="usp-title">Same-Day Spot Delivery</h3>
-          <p class="usp-desc">Because our scooters require no RTO registration or paperwork queues, you can complete the purchase and ride home your brand-new scooter in 30 minutes.</p>
+          <div class="usp-icon-box">🚚</div>
+          <h3 class="usp-title">Same-Day Doorstep Home Delivery</h3>
+          <p class="usp-desc">Enjoy fast and secure doorstep delivery with full vehicle handover, battery charging demo, and zero paperwork hassle.</p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon-box">🛠️</div>
+          <h3 class="usp-title">Certified Doorstep Home Service</h3>
+          <p class="usp-desc">Trained EV mechanics visit your home for scheduled tune-ups, genuine spare parts, and on-site battery health diagnostics.</p>
         </div>
 
         <div class="usp-card">
           <div class="usp-icon-box">💳</div>
-          <h3 class="usp-title">Easy Finance &amp; 0 Down Payment</h3>
-          <p class="usp-desc">Affordable EMI schemes starting as low as ₹1,799/month with instant digital paperless loan approval from top banking partners.</p>
-        </div>
-
-        <div class="usp-card">
-          <div class="usp-icon-box">🔧</div>
-          <h3 class="usp-title">Authorized Service &amp; Spares</h3>
-          <p class="usp-desc">100% genuine Urban Bikes spare parts, certified EV technicians, and periodic health checks for maximum battery longevity.</p>
+          <h3 class="usp-title">Easy Finance &amp; Low Down Payment</h3>
+          <p class="usp-desc">Affordable EMI schemes starting as low as ₹1,799/month with instant digital paperless loan approval from banking partners.</p>
         </div>
       </div>
     </div>
@@ -459,7 +639,7 @@
             <span class="faq-toggle-icon">▼</span>
           </div>
           <div class="faq-body">
-            Yes! Because no driving license is required, students aged 16 and above can comfortably commute to school, college, tuition centers, and sports practices without any legal hassle.
+            Yes! Because no driving license is required, students aged 14 and above can comfortably commute to school, college, tuition centers, and sports practices without any legal hassle.
           </div>
         </div>
 
@@ -485,11 +665,31 @@
 
         <div class="faq-card">
           <div class="faq-header">
-            <span>Can I get doorstep delivery or book over WhatsApp?</span>
+            <span>How does Doorstep Home Delivery work?</span>
             <span class="faq-toggle-icon">▼</span>
           </div>
           <div class="faq-body">
-            Yes! You can contact us directly on WhatsApp at <strong>+91 90724 30473</strong>, choose your preferred color and model, and arrange for fast doorstep delivery or showroom pickup.
+            Once you choose your favorite Urban eBikes model and color (via WhatsApp or website), our team performs a complete Pre-Delivery Inspection (PDI) and dispatches the scooter safely to your doorstep. Upon arrival, our technician walks you through key features, demonstrates home charging, and hands over your keys and warranty documents.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header">
+            <span>Do you offer Doorstep Home Service for repairs and maintenance?</span>
+            <span class="faq-toggle-icon">▼</span>
+          </div>
+          <div class="faq-body">
+            Yes! NJ Motors provides convenient Doorstep Home Service. Our certified EV technicians can visit your home address for periodic maintenance checkups, battery health testing, brake &amp; electrical inspections, and genuine spare parts replacement without you having to travel to the showroom.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header">
+            <span>Can I book a scooter or request a service over WhatsApp?</span>
+            <span class="faq-toggle-icon">▼</span>
+          </div>
+          <div class="faq-body">
+            Yes! You can contact us directly on WhatsApp at <strong>+91 90724 30473</strong> anytime to inquire about prices, book a free test ride, arrange doorstep home delivery, or schedule a doorstep maintenance service.
           </div>
         </div>
       </div>
@@ -524,10 +724,10 @@
         <div>
           <img src="assets/logo.png" alt="NJ Motors" class="footer-brand-logo" />
           <p class="footer-bio">
-            NJ Motors is the official dealership for Urban eBikes electric scooters. We provide barrier-free, non-RTO personal mobility solutions requiring zero driving licenses.
+            NJ Motors is the official dealership for Urban eBikes electric scooters. We provide barrier-free, non-RTO personal mobility solutions with full doorstep home delivery and home service support.
           </p>
           <div style="color: #4ade80; font-weight: 700; font-size: 0.9rem;">
-            ⚡ 100% Electric • No License • Non-RTO
+            ⚡ 100% Electric • No License • Home Delivery &amp; Home Service
           </div>
         </div>
 

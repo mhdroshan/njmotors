@@ -14,7 +14,7 @@
   <div class="header-topbar">
     <div class="container header-topbar-inner">
       <div class="topbar-badge">
-        <span>⚡</span> Official Dealership of Urban eBikes | Non-RTO &amp; No License Required
+        <span>⚡</span> Official Dealership of Urban eBikes | 🚚 Doorstep Delivery &amp; 🛠️ Home Service Available
       </div>
       <div class="topbar-contact">
         <a href="tel:+919072430473">📞 +91 90724 30473</a>
@@ -106,8 +106,14 @@
         <div class="pdp-info-col">
           <div class="pdp-badges-row">
             <span class="scooter-badge" id="pdpModelBadge">Urban Bikes</span>
-            <span class="hero-badge" style="background: rgba(59, 130, 246, 0.1); color: #2563eb; border-color: rgba(59, 130, 246, 0.3);">
+            <span class="hero-badge" id="pdpBatteryBadge" style="background: rgba(59, 130, 246, 0.1); color: #2563eb; border-color: rgba(59, 130, 246, 0.3);">
               🛡️ 3-Year Battery Warranty
+            </span>
+            <span class="hero-badge" style="background: rgba(34, 197, 94, 0.1); color: #16a34a; border-color: rgba(34, 197, 94, 0.3);">
+              🚚 Doorstep Home Delivery
+            </span>
+            <span class="hero-badge" style="background: rgba(46, 178, 76, 0.1); color: #1b7a32; border-color: rgba(46, 178, 76, 0.3);">
+              🛠️ Doorstep Home Service
             </span>
           </div>
 
@@ -117,6 +123,16 @@
           <p id="pdpDescription" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
             Loading description...
           </p>
+
+          <!-- Interactive Battery Type Selector -->
+          <div class="pdp-battery-selection-wrap" id="pdpBatterySelector">
+            <!-- Rendered dynamically by js/product.js -->
+          </div>
+
+          <!-- Quick Dynamic Specs Grid -->
+          <div class="pdp-quick-specs-grid" id="pdpQuickSpecs">
+            <!-- Rendered dynamically by js/product.js -->
+          </div>
 
           <!-- Price Panel -->
           <div class="pdp-price-panel">
@@ -152,6 +168,11 @@
             <div class="pdp-features-list" id="pdpFeaturesContainer">
               <!-- Rendered dynamically -->
             </div>
+          </div>
+
+          <!-- Dual Battery Comparison Box -->
+          <div class="battery-compare-box" id="pdpBatteryCompareBox">
+            <!-- Rendered dynamically by js/product.js -->
           </div>
 
           <!-- Comprehensive Technical Specifications Tables -->
@@ -193,10 +214,10 @@
         <div>
           <img src="assets/logo.png" alt="NJ Motors" class="footer-brand-logo" />
           <p class="footer-bio">
-            NJ Motors is the official dealership for Urban eBikes electric scooters. We provide barrier-free, non-RTO personal mobility solutions requiring zero driving licenses.
+            NJ Motors is the official dealership for Urban eBikes electric scooters. We provide barrier-free, non-RTO personal mobility solutions with full doorstep home delivery and home service support.
           </p>
           <div style="color: #4ade80; font-weight: 700; font-size: 0.9rem;">
-            ⚡ 100% Electric • No License • Non-RTO
+            ⚡ 100% Electric • No License • Home Delivery &amp; Home Service
           </div>
         </div>
 

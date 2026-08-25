@@ -3,6 +3,7 @@
  * Provides instant synchronous availability for file:// and offline environments,
  * while matching data/scooters.json exactly.
  * Product data based on authentic Urban eBikes lineup (urbanebikes.in).
+ * Dual Battery Architecture: Lithium Battery (Smart BMS, Fast Charge, 3-Yr Warranty) & Graphene Battery (1-Yr Warranty).
  */
 
 window.SCOOTERS_DATA = [
@@ -14,26 +15,74 @@ window.SCOOTERS_DATA = [
     "badge": "Best Seller",
     "price": "₹54,999",
     "numericPrice": 54999,
-    "range": "75 - 85 km",
-    "rangeKm": 85,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "Lead Acid / Li-ion (Smart BMS)",
-    "batteryCapacity": "60V 24Ah Advanced Lithium / Lead-Acid",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "60V 24Ah Lithium-ion / Graphene",
     "motor": "BLDC Hub Motor (Waterproof High-Torque)",
-    "chargingTime": "3.5 - 4 Hours",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum with E-ABS",
     "tyres": "90/100-10 Tubeless All-Weather Tyres",
     "payload": "160 kg",
     "weight": "68 kg",
     "groundClearance": "170 mm",
-    "warranty": "Up to 3 Years Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
-    "description": "Urban Legend is engineered for college students and everyday city commuters. Featuring smart wireless control, exceptional energy efficiency, front disc braking, and an ultra-comfortable ergonomic ride with zero registration paperwork.",
+    "description": "Urban Legend is engineered for college students and everyday city commuters. Available in both Lithium (3-Year Warranty, Fast Charging) and Graphene (1-Year Warranty) battery variants with zero registration paperwork.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "Advanced Li-ion with Smart BMS",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "60V 24Ah Advanced Lithium-ion (Smart BMS)",
+        "placement": "Portable Detachable Under-seat",
+        "powerConsumption": "~1.2 Units per Full Charge (~₹8)"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "60V Heavy-Duty Graphene Battery",
+        "placement": "Under-seat Battery Compartment",
+        "powerConsumption": "~1.4 Units per Full Charge (~₹9)"
+      }
+    },
     "colors": [
-      { "name": "Royal Maroon", "hex": "#881337", "image": "assets/images/legend-maroon.png" },
-      { "name": "Ocean Blue", "hex": "#1d4ed8", "image": "assets/images/legend-blue.png" },
-      { "name": "Titanium Grey", "hex": "#64748b", "image": "assets/images/falcon-grey.png" },
-      { "name": "Racing Yellow", "hex": "#eab308", "image": "assets/images/y1.png" }
+      {
+        "name": "Royal Maroon",
+        "hex": "#881337",
+        "image": "assets/images/legend-maroon.png"
+      },
+      {
+        "name": "Ocean Blue",
+        "hex": "#1d4ed8",
+        "image": "assets/images/legend-blue.png"
+      },
+      {
+        "name": "Titanium Grey",
+        "hex": "#64748b",
+        "image": "assets/images/falcon-grey.png"
+      },
+      {
+        "name": "Racing Yellow",
+        "hex": "#eab308",
+        "image": "assets/images/y1.png"
+      }
     ],
     "features": [
       "Keyless Entry & Smart Remote Start",
@@ -42,23 +91,25 @@ window.SCOOTERS_DATA = [
       "Cruise Control System",
       "Reverse Gear Assist for Easy Parking",
       "3-Speed Riding Modes (Eco / City / Turbo)",
-      "Up to 3-Year Comprehensive Warranty",
+      "Choice of Lithium (3-Yr) or Graphene (1-Yr) Battery",
       "Zero RTO Registration & No License Needed"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h (Govt. Approved Non-RTO)",
-        "Certified Range": "85 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge (Cost-Effective)",
         "Motor Type": "BLDC Hub Motor (Waterproof High-Torque)",
         "Controller": "48/60V Smart Wireless Controller",
         "Gradeability / Climb": "12 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "60V 24Ah Advanced Lithium-ion / Lead-Acid",
-        "Battery Placement": "Portable Detachable Under-seat",
-        "Charging Time": "3.5 - 4 Hours to 100%",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium (Auto-cut) / Standard on Graphene",
         "Charger Type": "Smart Micro-controller with Auto-cut",
-        "Power Consumption": "~1.2 Units per Full Charge (approx. ₹8)"
+        "Power Consumption": "~1.2 Units (Lithium) / ~1.4 Units (Graphene)"
       },
       "Chassis & Safety": {
         "Braking System": "Front Hydraulic Disc + Rear Drum with E-ABS",
@@ -84,26 +135,74 @@ window.SCOOTERS_DATA = [
     "badge": "Popular",
     "price": "₹58,499",
     "numericPrice": 58499,
-    "range": "80 - 90 km",
-    "rangeKm": 90,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "Lead Acid / Li-ion (Smart BMS)",
-    "batteryCapacity": "60V 26Ah Smart Lithium-ion / Lead-Acid",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "60V 26Ah Lithium-ion / Graphene",
     "motor": "BLDC Hub Motor (High Efficiency)",
-    "chargingTime": "3.5 - 4 Hours",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum",
     "tyres": "90/100-10 Anti-Skid Tubeless",
     "payload": "165 kg",
     "weight": "70 kg",
     "groundClearance": "175 mm",
-    "warranty": "Up to 3 Years Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
-    "description": "Urban Fusion blends stylish dynamic body styling with reliable electric engineering. Engineered with 3 speed modes, USB connectivity, cruise control, and keyless ignition for an exciting commute.",
+    "description": "Urban Fusion blends stylish dynamic body styling with reliable electric engineering. Choose between high-performance Lithium with Fast Charging & 3-year warranty, or economical Graphene battery with 1-year warranty.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "Advanced Li-ion with Smart BMS",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "60V 26Ah Smart BMS Lithium-ion",
+        "placement": "Detachable Under-seat",
+        "powerConsumption": "~1.3 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "60V Heavy-Duty Graphene Battery",
+        "placement": "Under-seat Battery Compartment",
+        "powerConsumption": "~1.5 Units per Full Charge"
+      }
+    },
     "colors": [
-      { "name": "Crimson Red", "hex": "#dc2626", "image": "assets/images/fusion-red.png" },
-      { "name": "Midnight Blue", "hex": "#1e3a8a", "image": "assets/images/legend-blue.png" },
-      { "name": "Steel Grey", "hex": "#475569", "image": "assets/images/falcon-grey.png" },
-      { "name": "Sunset Yellow", "hex": "#eab308", "image": "assets/images/y1.png" }
+      {
+        "name": "Crimson Red",
+        "hex": "#dc2626",
+        "image": "assets/images/fusion-red.png"
+      },
+      {
+        "name": "Midnight Blue",
+        "hex": "#1e3a8a",
+        "image": "assets/images/legend-blue.png"
+      },
+      {
+        "name": "Steel Grey",
+        "hex": "#475569",
+        "image": "assets/images/falcon-grey.png"
+      },
+      {
+        "name": "Sunset Yellow",
+        "hex": "#eab308",
+        "image": "assets/images/y1.png"
+      }
     ],
     "features": [
       "Keyless Entry System with Smart Key",
@@ -112,21 +211,23 @@ window.SCOOTERS_DATA = [
       "Cruise Control for Smooth Cruising",
       "Reverse Assist Gear",
       "3 Speed Selectable Drive Modes",
-      "Up to 3-Year Quality Warranty",
+      "Available with Lithium (3-Yr) or Graphene (1-Yr)",
       "Telescopic Front & Hydraulic Rear Suspension"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h (Govt. Approved Non-RTO)",
-        "Certified Range": "90 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
         "Motor Type": "BLDC Hub Motor",
         "Controller": "48/60V Smart Wireless Controller",
         "Gradeability": "13 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "60V 26Ah Smart BMS Lithium-ion / Lead Acid",
-        "Battery Placement": "Detachable Under-seat",
-        "Charging Time": "3.5 - 4 Hours",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
         "Charger Type": "Smart Auto Cut-Off Charger",
         "Electricity Cost": "₹0.14 per km"
       },
@@ -153,26 +254,74 @@ window.SCOOTERS_DATA = [
     "badge": "Customer Choice",
     "price": "₹56,999",
     "numericPrice": 56999,
-    "range": "80 - 90 km",
-    "rangeKm": 90,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "Lead Acid / Li-ion (Smart BMS)",
-    "batteryCapacity": "60V 26Ah Smart Lithium / Lead Acid",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "60V 26Ah Lithium-ion / Graphene",
     "motor": "BLDC Hub Motor",
-    "chargingTime": "3.5 - 4 Hours",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum",
     "tyres": "90/100-10 Tubeless",
     "payload": "165 kg",
     "weight": "69 kg",
     "groundClearance": "175 mm",
-    "warranty": "Up to 3 Years Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
-    "description": "Urban Falcon is crafted with sharp aerodynamic contours and swift acceleration for effortless daily commuting across busy town roads with zero petrol consumption.",
+    "description": "Urban Falcon is crafted with sharp aerodynamic contours and swift acceleration for effortless daily commuting. Available with Lithium (Fast Charge, 3-Yr Warranty) or Graphene (1-Yr Warranty) packs.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "Advanced Li-ion with Smart BMS",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "60V 26Ah Smart Lithium-ion",
+        "placement": "Detachable Under-seat",
+        "powerConsumption": "~1.3 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "60V Heavy-Duty Graphene Battery",
+        "placement": "Under-seat Battery Compartment",
+        "powerConsumption": "~1.5 Units per Full Charge"
+      }
+    },
     "colors": [
-      { "name": "Slate Grey", "hex": "#64748b", "image": "assets/images/falcon-grey.png" },
-      { "name": "Pearl White", "hex": "#f8fafc", "image": "assets/images/optima-white.png" },
-      { "name": "Deep Maroon", "hex": "#881337", "image": "assets/images/legend-maroon.png" },
-      { "name": "Electric Blue", "hex": "#2563eb", "image": "assets/images/legend-blue.png" }
+      {
+        "name": "Slate Grey",
+        "hex": "#64748b",
+        "image": "assets/images/falcon-grey.png"
+      },
+      {
+        "name": "Pearl White",
+        "hex": "#f8fafc",
+        "image": "assets/images/optima-white.png"
+      },
+      {
+        "name": "Deep Maroon",
+        "hex": "#881337",
+        "image": "assets/images/legend-maroon.png"
+      },
+      {
+        "name": "Electric Blue",
+        "hex": "#2563eb",
+        "image": "assets/images/legend-blue.png"
+      }
     ],
     "features": [
       "Keyless Entry with Push Start",
@@ -181,21 +330,23 @@ window.SCOOTERS_DATA = [
       "Cruise Control Function",
       "Reverse Gear Capability",
       "3-Speed Performance Modes",
-      "Up to 3-Year Warranty",
+      "Lithium (3-Year) & Graphene (1-Year) Options",
       "Alloy Wheels with Tubeless Tyres"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h",
-        "Certified Range": "90 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
         "Motor Power": "BLDC High Efficiency Hub Motor",
         "Controller": "48/60V Smart Wireless Controller",
         "Gradeability": "13 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "60V 26Ah Smart Lithium / Lead-Acid",
-        "Battery Placement": "Detachable Under-seat",
-        "Charging Time": "3.5 - 4 Hours",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
         "Charger Type": "Smart Auto Cut-Off Charger",
         "Electricity Cost": "₹0.14 per km"
       },
@@ -222,26 +373,74 @@ window.SCOOTERS_DATA = [
     "badge": "Top Value",
     "price": "₹53,999",
     "numericPrice": 53999,
-    "range": "75 - 85 km",
-    "rangeKm": 85,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "Lead Acid / Li-ion",
-    "batteryCapacity": "48V / 60V 24Ah Battery",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "48V / 60V 24Ah Lithium-ion / Graphene",
     "motor": "BLDC Hub Motor",
-    "chargingTime": "3.5 - 4 Hours",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum",
     "tyres": "90/100-10 Tubeless Tyres",
     "payload": "155 kg",
     "weight": "67 kg",
     "groundClearance": "170 mm",
-    "warranty": "Up to 3 Years Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
     "description": "Urban Optima delivers maximum cost-efficiency, smooth low-drag acceleration, and everyday reliability with minimal operating costs under ₹0.15/km.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "Advanced Li-ion Pack",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "48V/60V 24Ah Advanced Lithium-ion",
+        "placement": "Detachable Pack",
+        "powerConsumption": "~1.2 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "48V/60V Heavy-Duty Graphene Battery",
+        "placement": "Under-seat Compartment",
+        "powerConsumption": "~1.4 Units per Full Charge"
+      }
+    },
     "colors": [
-      { "name": "Metallic Maroon", "hex": "#881337", "image": "assets/images/optima-maroon.png" },
-      { "name": "Glossy White", "hex": "#f8fafc", "image": "assets/images/optima-white.png" },
-      { "name": "Ocean Blue", "hex": "#1d4ed8", "image": "assets/images/legend-blue.png" },
-      { "name": "Titanium Grey", "hex": "#64748b", "image": "assets/images/falcon-grey.png" }
+      {
+        "name": "Metallic Maroon",
+        "hex": "#881337",
+        "image": "assets/images/optima-maroon.png"
+      },
+      {
+        "name": "Glossy White",
+        "hex": "#f8fafc",
+        "image": "assets/images/optima-white.png"
+      },
+      {
+        "name": "Ocean Blue",
+        "hex": "#1d4ed8",
+        "image": "assets/images/legend-blue.png"
+      },
+      {
+        "name": "Titanium Grey",
+        "hex": "#64748b",
+        "image": "assets/images/falcon-grey.png"
+      }
     ],
     "features": [
       "Keyless Smart Entry",
@@ -250,21 +449,23 @@ window.SCOOTERS_DATA = [
       "Cruise Control System",
       "Reverse Mode for Easy Manoeuvring",
       "3-Speed Power Modes",
-      "Up to 3-Year Warranty",
+      "Dual Battery Choices (Lithium 3-Yr / Graphene 1-Yr)",
       "Low Running Cost (~₹8 per 80 km)"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h",
-        "Certified Range": "85 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
         "Motor Power": "BLDC Hub Motor",
         "Controller": "48/60V Smart Wireless Controller",
         "Gradeability": "12 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "48V/60V 24Ah Lead Acid / Lithium-ion",
-        "Battery Placement": "Detachable Pack",
-        "Charging Time": "3.5 - 4 Hours",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
         "Charger Type": "Smart Charger with Auto Cut-Off",
         "Electricity Cost": "₹0.13 per km"
       },
@@ -291,26 +492,74 @@ window.SCOOTERS_DATA = [
     "badge": "Flagship",
     "price": "₹63,999",
     "numericPrice": 63999,
-    "range": "90 - 100 km",
-    "rangeKm": 100,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "Lead Acid / Li-ion (60V/72V)",
-    "batteryCapacity": "60V / 72V 30Ah High-Performance Pack",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "60V / 72V 30Ah Lithium-ion / Graphene",
     "motor": "BLDC High-Torque Hub Motor",
-    "chargingTime": "4 Hours",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum",
     "tyres": "90/100-12 Large Tubeless Tyres",
     "payload": "175 kg",
     "weight": "72 kg",
     "groundClearance": "180 mm",
-    "warranty": "Up to 3 Years Comprehensive Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
-    "description": "Urban Phantom delivers imposing road presence, 12-inch oversized alloy wheels for effortless road stability, colored digital instrumentation, and a 60/72V dual-voltage capable controller.",
+    "description": "Urban Phantom delivers imposing road presence, 12-inch oversized alloy wheels, colored digital display, and a 60/72V dual-voltage controller with Lithium or Graphene battery options.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "High-Performance Lithium Pack",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "60V / 72V 30Ah Advanced Lithium-ion",
+        "placement": "Central Weight-Balanced Under-seat",
+        "powerConsumption": "~1.5 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "60V / 72V Heavy-Duty Graphene Battery Pack",
+        "placement": "Central Under-seat Compartment",
+        "powerConsumption": "~1.7 Units per Full Charge"
+      }
+    },
     "colors": [
-      { "name": "Glacier White", "hex": "#ffffff", "image": "assets/images/phantom-white.png" },
-      { "name": "Royal Blue", "hex": "#1e40af", "image": "assets/images/phantom-blue.png" },
-      { "name": "Matte Titanium Grey", "hex": "#4b5563", "image": "assets/images/phantom-grey.png" },
-      { "name": "Solar Yellow", "hex": "#eab308", "image": "assets/images/y1.png" }
+      {
+        "name": "Glacier White",
+        "hex": "#ffffff",
+        "image": "assets/images/phantom-white.png"
+      },
+      {
+        "name": "Royal Blue",
+        "hex": "#1e40af",
+        "image": "assets/images/phantom-blue.png"
+      },
+      {
+        "name": "Matte Titanium Grey",
+        "hex": "#4b5563",
+        "image": "assets/images/phantom-grey.png"
+      },
+      {
+        "name": "Solar Yellow",
+        "hex": "#eab308",
+        "image": "assets/images/y1.png"
+      }
     ],
     "features": [
       "Keyless Entry & Remote Push-Button Start",
@@ -320,20 +569,22 @@ window.SCOOTERS_DATA = [
       "Large 12-inch Alloy Wheels for High Ground Clearance",
       "Reverse Gear Assistance",
       "3-Speed Drive Modes",
-      "Up to 3-Year Warranty"
+      "Choice of 3-Year Lithium or 1-Year Graphene Battery"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h",
-        "Certified Range": "100 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
         "Motor Power": "BLDC High Torque Hub Motor",
         "Controller": "60/72V Smart Wireless Controller",
         "Gradeability": "15 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "60V / 72V 30Ah Lead Acid / Lithium-ion",
-        "Battery Placement": "Central Weight-Balanced Under-seat",
-        "Charging Time": "3.5 - 4 Hours",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
         "Charger Type": "Fast Smart Charger",
         "Electricity Cost": "₹0.14 per km"
       },
@@ -360,49 +611,99 @@ window.SCOOTERS_DATA = [
     "badge": "Max Range",
     "price": "₹68,999",
     "numericPrice": 68999,
-    "range": "100 - 110 km",
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
     "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "60V/72V Dual-Ready Lithium-ion",
-    "batteryCapacity": "72V 32Ah Advanced Lithium / Lead-Acid",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "72V 32Ah Lithium-ion / Graphene",
     "motor": "BLDC Heavy Duty Hub Motor",
-    "chargingTime": "4 - 4.5 Hours",
+    "chargingTime": "4 - 4.5 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum",
     "tyres": "90/100-12 Extra-Grip Tubeless",
     "payload": "180 kg",
     "weight": "74 kg",
     "groundClearance": "180 mm",
-    "warranty": "Up to 3 Years Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
-    "description": "The Phantom+ is the extended-range evolution of the Phantom lineup, packing 72V dual-voltage support, 110km certified single-charge range, and plush long-distance seating.",
+    "description": "The Phantom+ is the extended-range evolution packing 72V dual-voltage support, up to 110km certified single-charge range on Lithium, and plush long-distance seating.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "High-Energy Density Lithium-ion",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "4 - 4.5 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (4 - 4.5 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "72V 32Ah High-Energy Density Lithium-ion",
+        "placement": "Detachable Pack",
+        "powerConsumption": "~1.7 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "72V 32Ah High-Capacity Graphene Battery Pack",
+        "placement": "Under-seat Heavy Duty Compartment",
+        "powerConsumption": "~1.9 Units per Full Charge"
+      }
+    },
     "colors": [
-      { "name": "Cyber Cyan", "hex": "#0284c7", "image": "assets/images/phantom-plus.png" },
-      { "name": "Matte Titanium Grey", "hex": "#4b5563", "image": "assets/images/phantom-grey.png" },
-      { "name": "Glacier White", "hex": "#ffffff", "image": "assets/images/phantom-white.png" },
-      { "name": "Royal Blue", "hex": "#1e40af", "image": "assets/images/phantom-blue.png" }
+      {
+        "name": "Cyber Cyan",
+        "hex": "#0284c7",
+        "image": "assets/images/phantom-plus.png"
+      },
+      {
+        "name": "Matte Titanium Grey",
+        "hex": "#4b5563",
+        "image": "assets/images/phantom-grey.png"
+      },
+      {
+        "name": "Glacier White",
+        "hex": "#ffffff",
+        "image": "assets/images/phantom-white.png"
+      },
+      {
+        "name": "Royal Blue",
+        "hex": "#1e40af",
+        "image": "assets/images/phantom-blue.png"
+      }
     ],
     "features": [
-      "Extended 110 KM Range for Inter-City Rides",
+      "Extended 80 - 110 KM Range for Inter-City Rides",
       "Keyless Smart Entry & Engine Push Start",
       "Anti-Theft Alarm with Motion Sensor",
       "Colored High-Resolution Digital Dashboard",
       "USB Fast Phone Charging Port",
       "12-Inch Tubeless Alloy Wheel System",
       "Reverse Gear & 3-Speed Modes",
-      "Up to 3-Year Comprehensive Warranty"
+      "Lithium (3-Year) & Graphene (1-Year) Options"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h",
-        "Certified Range": "110 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
         "Motor Power": "BLDC Heavy-Duty Hub Motor",
         "Controller": "60/72V Smart Wireless Controller",
         "Gradeability": "15 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "72V 32Ah High-Energy Density Lithium / Lead-Acid",
-        "Battery Placement": "Detachable Pack",
-        "Charging Time": "4 - 4.5 Hours",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "4 - 4.5 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
         "Charger Type": "Fast Smart Charger",
         "Electricity Cost": "₹0.14 per km"
       },
@@ -429,26 +730,74 @@ window.SCOOTERS_DATA = [
     "badge": "Gen I Icon",
     "price": "₹65,999",
     "numericPrice": 65999,
-    "range": "95 - 105 km",
-    "rangeKm": 105,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "Lead Acid / Li-ion",
-    "batteryCapacity": "60V / 72V 30Ah Lithium Pack",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "60V / 72V 30Ah Lithium-ion / Graphene",
     "motor": "BLDC High-Efficiency Hub Motor",
-    "chargingTime": "4 Hours",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum",
     "tyres": "90/100-12 Tubeless Tyres",
     "payload": "175 kg",
     "weight": "73 kg",
     "groundClearance": "180 mm",
-    "warranty": "Up to 3 Years Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
-    "description": "Phantom Gen I features iconic sport decals, colored smart display, 12-inch wheels, and robust suspension engineered for superior performance on all Indian road conditions.",
+    "description": "Phantom Gen I features iconic sport styling, colored smart display, 12-inch wheels, and robust suspension engineered for superior performance with both Lithium and Graphene battery options.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "High-Performance Lithium Pack",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "60V / 72V 30Ah Lithium-ion Pack",
+        "placement": "Removable Pack",
+        "powerConsumption": "~1.5 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "60V / 72V Graphene Battery Pack",
+        "placement": "Under-seat Compartment",
+        "powerConsumption": "~1.7 Units per Full Charge"
+      }
+    },
     "colors": [
-      { "name": "Stealth Carbon Black", "hex": "#18181b", "image": "assets/images/phantom-gen-i.png" },
-      { "name": "Pearl White", "hex": "#ffffff", "image": "assets/images/phantom-white.png" },
-      { "name": "Royal Blue", "hex": "#1e40af", "image": "assets/images/phantom-blue.png" },
-      { "name": "Titanium Grey", "hex": "#4b5563", "image": "assets/images/phantom-grey.png" }
+      {
+        "name": "Stealth Carbon Black",
+        "hex": "#18181b",
+        "image": "assets/images/phantom-gen-i.png"
+      },
+      {
+        "name": "Pearl White",
+        "hex": "#ffffff",
+        "image": "assets/images/phantom-white.png"
+      },
+      {
+        "name": "Royal Blue",
+        "hex": "#1e40af",
+        "image": "assets/images/phantom-blue.png"
+      },
+      {
+        "name": "Titanium Grey",
+        "hex": "#4b5563",
+        "image": "assets/images/phantom-grey.png"
+      }
     ],
     "features": [
       "Keyless Entry & Remote Start",
@@ -458,20 +807,22 @@ window.SCOOTERS_DATA = [
       "Large 12-inch Alloy Wheels",
       "Reverse Gear Drive Assist",
       "3-Speed Power Selection",
-      "Up to 3-Year Manufacturer Warranty"
+      "Lithium (3-Yr) or Graphene (1-Yr) Warranty"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h",
-        "Certified Range": "105 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
         "Motor Power": "BLDC High-Efficiency Hub Motor",
         "Controller": "60/72V Smart Wireless Controller",
         "Gradeability": "14 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "60V / 72V 30Ah Lithium-ion / Lead-Acid",
-        "Battery Placement": "Removable Pack",
-        "Charging Time": "3.5 - 4 Hours",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
         "Charger Type": "Auto Cut-Off Smart Charger",
         "Electricity Cost": "₹0.14 per km"
       },
@@ -498,26 +849,74 @@ window.SCOOTERS_DATA = [
     "badge": "Family Choice",
     "price": "₹55,499",
     "numericPrice": 55499,
-    "range": "80 - 85 km",
-    "rangeKm": 85,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
     "topSpeed": "25 km/h",
-    "batteryType": "Lead Acid / Li-ion (Detachable)",
-    "batteryCapacity": "60V 24Ah Smart Lithium / Lead-Acid",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "60V 24Ah Lithium-ion / Graphene",
     "motor": "BLDC Smooth-Torque Hub Motor",
-    "chargingTime": "3.5 - 4 Hours",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
     "brakes": "Front Disc / Rear Drum",
     "tyres": "90/100-10 Tubeless Tyres",
     "payload": "160 kg",
     "weight": "68 kg",
     "groundClearance": "170 mm",
-    "warranty": "Up to 3 Years Warranty",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
     "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
-    "description": "Urban Destiny combines elegant curves, plush dual-density seating, deep under-seat boot space, and smart keyless security for an effortless family riding experience.",
+    "description": "Urban Destiny combines elegant curves, plush dual-density seating, deep under-seat boot space, and smart keyless security with Lithium or Graphene battery options.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "Advanced Smart Lithium Pack",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "60V 24Ah Smart Lithium-ion",
+        "placement": "Detachable Under-seat",
+        "powerConsumption": "~1.2 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "60V Heavy-Duty Graphene Battery",
+        "placement": "Under-seat Compartment",
+        "powerConsumption": "~1.4 Units per Full Charge"
+      }
+    },
     "colors": [
-      { "name": "Ruby Red", "hex": "#b91c1c", "image": "assets/images/destiny-red.png" },
-      { "name": "Ocean Blue", "hex": "#1d4ed8", "image": "assets/images/legend-blue.png" },
-      { "name": "Metallic Grey", "hex": "#64748b", "image": "assets/images/falcon-grey.png" },
-      { "name": "Pearl White", "hex": "#ffffff", "image": "assets/images/optima-white.png" }
+      {
+        "name": "Ruby Red",
+        "hex": "#b91c1c",
+        "image": "assets/images/destiny-red.png"
+      },
+      {
+        "name": "Ocean Blue",
+        "hex": "#1d4ed8",
+        "image": "assets/images/legend-blue.png"
+      },
+      {
+        "name": "Metallic Grey",
+        "hex": "#64748b",
+        "image": "assets/images/falcon-grey.png"
+      },
+      {
+        "name": "Pearl White",
+        "hex": "#ffffff",
+        "image": "assets/images/optima-white.png"
+      }
     ],
     "features": [
       "Keyless Entry & Remote Start",
@@ -526,21 +925,23 @@ window.SCOOTERS_DATA = [
       "Cruise Control for Fatigue-Free Cruising",
       "Reverse Assist Gear",
       "3-Speed Electronic Throttle Modes",
-      "Extra Padded Ergonomic Cushion Seat",
-      "Up to 3-Year Comprehensive Warranty"
+      "Lithium (3-Yr) or Graphene (1-Yr) Battery Options",
+      "Extra Padded Ergonomic Cushion Seat"
     ],
     "specs": {
       "Performance": {
         "Top Speed": "25 km/h",
-        "Certified Range": "85 km per charge",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
         "Motor Power": "BLDC Smooth-Torque Hub Motor",
         "Controller": "48/60V Smart Wireless Controller",
         "Gradeability": "12 Degrees"
       },
       "Battery & Electricals": {
-        "Battery Technology": "60V 24Ah Smart Lithium / Lead-Acid",
-        "Battery Placement": "Detachable Under-seat",
-        "Charging Time": "3.5 - 4 Hours",
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
         "Charger Type": "Auto Cut-Off Smart Charger",
         "Electricity Cost": "₹0.13 per km"
       },

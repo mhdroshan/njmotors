@@ -40,7 +40,7 @@ async function loadScootersData() {
           <div style="grid-column: 1/-1; text-align: center; padding: 3rem; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0;">
             <h3 style="color: #ef4444; margin-bottom: 0.5rem;">Unable to load scooter models</h3>
             <p style="color: #64748b; margin-bottom: 1.5rem;">Please check your connection or reload the page.</p>
-            <a href="https://wa.me/919072430473?text=Hi%20NJ%20Motors,%20please%20send%20me%20the%20catalog%20of%20all%20Urban%20Bikes%20models" class="btn btn-whatsapp" target="_blank">Inquire Directly on WhatsApp</a>
+            <a href="https://wa.me/916238669531?text=Hi%20NJ%20Motors,%20please%20send%20me%20the%20catalog%20of%20all%20Urban%20Bikes%20models" class="btn btn-whatsapp" target="_blank">Inquire Directly on WhatsApp</a>
           </div>
         `;
       }
@@ -105,7 +105,7 @@ function renderScooterGrid() {
     const grVar = scooter.batteryVariants?.graphene || { range: '65 - 80 km', chargingTime: '6 - 7 Hours' };
     
     const waText = encodeURIComponent(`Hi NJ Motors, I want to inquire about the Urban eBikes ${scooter.name} with Lithium Battery (Price: ${scooter.price}, Range: ${liVar.range}). Please share Doorstep Home Delivery details!`);
-    const waUrl = `https://wa.me/919072430473?text=${waText}`;
+    const waUrl = `https://wa.me/916238669531?text=${waText}`;
     const defaultColor = scooter.colors && scooter.colors.length > 0 ? scooter.colors[0] : null;
     const initialImg = defaultColor ? defaultColor.image : 'assets/images/b2.png';
 

@@ -1,10 +1,10 @@
 /**
  * NJ MOTORS - Global Application Logic
- * Dealership WhatsApp: +919072430473
+ * Dealership WhatsApp: +916238669531
  */
 
 const NJ_MOTORS = {
-  PHONE: '919072430473',
+  PHONE: '916238669531',
   DEALERSHIP_NAME: 'NJ Motors',
   BRAND_NAME: 'Urban eBikes',
 
@@ -198,7 +198,7 @@ function toggleCardBattery(event, scooterId, batteryType) {
     const scooterPrice = scooter?.price || '';
     const batteryLabel = isLithium ? 'Lithium Battery (3-Yr Warranty, Fast Charge)' : 'Graphene Battery (1-Yr Warranty, 6-7h Charge)';
     const waText = encodeURIComponent(`Hi NJ Motors, I want to inquire about the Urban eBikes ${scooterName} with ${batteryLabel} (Price: ${scooterPrice}, Range: ${activeVar.range}). Please share Doorstep Home Delivery details!`);
-    inquireBtn.href = `https://wa.me/919072430473?text=${waText}`;
+    inquireBtn.href = `https://wa.me/916238669531?text=${waText}`;
   }
 }
 

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://njmotors.in/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/logo.png</image:loc>
+      <image:title>NJ Motors - Official Urban eBikes Dealership Edavanna</image:title>
+      <image:caption>NJ Motors Edavanna - Authorized Dealer of Urban eBikes Electric Scooters in Kerala</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/legend-maroon.png</image:loc>
+      <image:title>Urban Legend Electric Scooter - NJ Motors Edavanna</image:title>
+      <image:caption>Urban Legend Electric Scooter with No Driving License Required</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Models & Shop Catalog -->
+  <url>
+    <loc>https://njmotors.in/models.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/logo.png</image:loc>
+      <image:title>Urban eBikes Lineup at NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact & Showroom Location -->
+  <url>
+    <loc>https://njmotors.in/contact.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/logo.png</image:loc>
+      <image:title>NJ Motors Showroom Location Edavanna Malappuram</image:title>
+    </image:image>
+  </url>
+
+  <!-- Individual Product Pages (Dynamic Model URLs for Deep Indexing) -->
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-legend</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/legend-maroon.png</image:loc>
+      <image:title>Urban Legend Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-fusion</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/fusion-red.png</image:loc>
+      <image:title>Urban Fusion Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-falcon</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/falcon-grey.png</image:loc>
+      <image:title>Urban Falcon Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-optima</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/optima-black.png</image:loc>
+      <image:title>Urban Optima Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-phantom</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/phantom-cyan.png</image:loc>
+      <image:title>Urban Phantom Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-phantom-plus</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/phantom-plus-teal.png</image:loc>
+      <image:title>Urban Phantom Plus Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-phantom-gen-i</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/phantom-gen-i-green.png</image:loc>
+      <image:title>Urban Phantom Gen I Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=urban-destiny</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/destiny-red.png</image:loc>
+      <image:title>Urban Destiny Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=i-cruze</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/i-cruze-black.png</image:loc>
+      <image:title>I Cruze Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=raptor-2-0</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/raptor-2-0-white.png</image:loc>
+      <image:title>Raptor 2.0 Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=symphony</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/symphony-blue.png</image:loc>
+      <image:title>Symphony Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://njmotors.in/product.html?id=despro</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://njmotors.in/assets/images/despro-white.png</image:loc>
+      <image:title>Despro Electric Scooter - NJ Motors Edavanna</image:title>
+    </image:image>
+  </url>
+
+</urlset>

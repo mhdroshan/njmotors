@@ -59,8 +59,110 @@ async function loadProductDetails() {
 }
 
 function renderProductPage(scooter) {
-  // Update Document Meta & Title
-  document.title = `${scooter.name} - Electric Scooter (No License Required) | NJ Motors`;
+  // Update Document Meta & Title for Dynamic SEO
+  const fullModelName = scooter.name.startsWith('Urban') ? scooter.name : `Urban ${scooter.name}`;
+  const pageTitle = `${fullModelName} Electric Scooter - Specs, Price, Range | NJ Motors Edavanna`;
+  document.title = pageTitle;
+
+  const metaDescText = `${fullModelName} electric scooter by Urban eBikes at NJ Motors Edavanna, Kerala. ${scooter.tagline}. Range: ${scooter.range || '80-110 km'}. No driving license required, zero RTO registration. Call +91 62386 69531.`;
+  
+  const seoDescEl = document.getElementById('seoMetaDesc');
+  if (seoDescEl) seoDescEl.setAttribute('content', metaDescText);
+  const ogDescEl = document.getElementById('ogDesc');
+  if (ogDescEl) ogDescEl.setAttribute('content', metaDescText);
+  const twitterDescEl = document.getElementById('twitterDesc');
+  if (twitterDescEl) twitterDescEl.setAttribute('content', metaDescText);
+
+  const ogTitleEl = document.getElementById('ogTitle');
+  if (ogTitleEl) ogTitleEl.setAttribute('content', `${fullModelName} Electric Scooter | NJ Motors Edavanna`);
+  const twitterTitleEl = document.getElementById('twitterTitle');
+  if (twitterTitleEl) twitterTitleEl.setAttribute('content', `${fullModelName} Electric Scooter | NJ Motors Edavanna`);
+
+  const canonicalUrl = `https://njmotors.in/product.html?id=${encodeURIComponent(scooter.id)}`;
+  const seoCanonical = document.getElementById('seoCanonical');
+  if (seoCanonical) seoCanonical.setAttribute('href', canonicalUrl);
+  const ogUrl = document.getElementById('ogUrl');
+  if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+  const twitterUrl = document.getElementById('twitterUrl');
+  if (twitterUrl) twitterUrl.setAttribute('content', canonicalUrl);
+
+  const defaultImg = (scooter.colors && scooter.colors[0]) ? scooter.colors[0].image : 'assets/images/legend-maroon.png';
+  const fullImgUrl = `https://njmotors.in/${defaultImg}`;
+  const ogImage = document.getElementById('ogImage');
+  if (ogImage) ogImage.setAttribute('content', fullImgUrl);
+  const ogImageSecure = document.getElementById('ogImageSecure');
+  if (ogImageSecure) ogImageSecure.setAttribute('content', fullImgUrl);
+  const twitterImage = document.getElementById('twitterImage');
+  if (twitterImage) twitterImage.setAttribute('content', fullImgUrl);
+
+  // Update Dynamic Schema.org Product JSON-LD
+  const schemaEl = document.getElementById('productJsonLd');
+  if (schemaEl) {
+    const productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": `${canonicalUrl}#product`,
+      "name": `${fullModelName} Electric Scooter`,
+      "image": [fullImgUrl, "https://njmotors.in/assets/logo.png"],
+      "description": scooter.description || metaDescText,
+      "sku": scooter.id,
+      "mpn": scooter.id,
+      "brand": {
+        "@type": "Brand",
+        "name": "Urban eBikes"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Urban eBikes"
+      },
+      "category": "Vehicles & Parts > Vehicles > Motor Vehicles > Scooters",
+      "offers": {
+        "@type": "Offer",
+        "url": canonicalUrl,
+        "priceCurrency": "INR",
+        "price": scooter.numericPrice || 49999,
+        "priceValidUntil": "2027-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "MotorcycleDealer",
+          "name": "NJ Motors Edavanna",
+          "telephone": "+916238669531",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "NJ. MOTORS, CNG ROAD",
+            "addressLocality": "Edavanna",
+            "addressRegion": "Kerala",
+            "postalCode": "676541",
+            "addressCountry": "IN"
+          }
+        }
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Driving License Requirement",
+          "value": "No License Required (Non-RTO)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Certified Range",
+          "value": scooter.range || "80 - 110 km"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Top Speed",
+          "value": scooter.topSpeed || "25 km/h"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Warranty",
+          "value": scooter.warranty || "3 Years (Lithium) / 1 Year (Graphene)"
+        }
+      ]
+    };
+    schemaEl.textContent = JSON.stringify(productSchema, null, 2);
+  }
 
   // Breadcrumb
   const breadcrumbModel = document.getElementById('pdpBreadcrumbModel');
@@ -81,10 +183,9 @@ function renderProductPage(scooter) {
 
   // Gallery & Image
   const mainImg = document.getElementById('pdpMainImg');
-  const defaultImg = (scooter.colors && scooter.colors[0]) ? scooter.colors[0].image : 'assets/images/legend-maroon.png';
   if (mainImg) {
     mainImg.src = defaultImg;
-    mainImg.alt = `${scooter.name} Electric Scooter - NJ Motors`;
+    mainImg.alt = `${fullModelName} Electric Scooter at NJ Motors Edavanna`;
   }
 
   // Color Swatches
@@ -161,7 +262,7 @@ function renderBatterySelector(scooter) {
     <div class="battery-options-grid">
       <!-- Option 1: Lithium Battery -->
       <button type="button" class="battery-opt-btn ${selectedBatteryType === 'lithium' ? 'active' : ''}" id="btn-battery-lithium" onclick="selectBatteryOption('lithium')">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="justify-content: space-between; align-items: center;" class="d-none">
           <span class="battery-opt-badge lithium-badge">⚡ 3-Year Warranty • Fast Charge</span>
           <div class="battery-check-icon">${selectedBatteryType === 'lithium' ? '✓' : ''}</div>
         </div>
@@ -175,7 +276,7 @@ function renderBatterySelector(scooter) {
 
       <!-- Option 2: Graphene Battery -->
       <button type="button" class="battery-opt-btn ${selectedBatteryType === 'graphene' ? 'active' : ''}" id="btn-battery-graphene" onclick="selectBatteryOption('graphene')">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="justify-content: space-between; align-items: center;" class="d-none">
           <span class="battery-opt-badge graphene-badge">💰 1-Year Warranty • Standard</span>
           <div class="battery-check-icon">${selectedBatteryType === 'graphene' ? '✓' : ''}</div>
         </div>
@@ -274,7 +375,7 @@ function updateQuickSpecsAndCTAs(scooter) {
   const testRideMessage = `Hi NJ Motors, I would like to book a free test ride (showroom or doorstep) for the Urban eBikes ${scooter.name} (${batteryLabel}). Please let me know the timing and availability.`;
 
   if (primaryWaBtn) {
-    primaryWaBtn.href = `https://wa.me/919072430473?text=${encodeURIComponent(inquiryMessage)}`;
+    primaryWaBtn.href = `https://wa.me/916238669531?text=${encodeURIComponent(inquiryMessage)}`;
     primaryWaBtn.innerHTML = `
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
       Inquire about ${scooter.name} (${selectedBatteryType === 'lithium' ? 'Lithium' : 'Graphene'})
@@ -282,7 +383,7 @@ function updateQuickSpecsAndCTAs(scooter) {
   }
 
   if (testRideWaBtn) {
-    testRideWaBtn.href = `https://wa.me/919072430473?text=${encodeURIComponent(testRideMessage)}`;
+    testRideWaBtn.href = `https://wa.me/916238669531?text=${encodeURIComponent(testRideMessage)}`;
   }
 }
 
@@ -415,7 +516,7 @@ function renderSimilarModels(current) {
     const defaultColor = s.colors && s.colors[0] ? s.colors[0].image : 'assets/images/b2.png';
     const liVar = s.batteryVariants?.lithium || { range: '80 - 110 km', chargingTime: '3.5 - 4 Hours' };
     const waText = encodeURIComponent(`Hi NJ Motors, I want to inquire about the Urban eBikes ${s.name} with Lithium Battery (Price: ${s.price}, Range: ${liVar.range}).`);
-    const waUrl = `https://wa.me/919072430473?text=${waText}`;
+    const waUrl = `https://wa.me/916238669531?text=${waText}`;
 
     return `
       <div class="scooter-card" id="card-${s.id}">

@@ -1,0 +1,6 @@
+# robots.txt for njmotors.in
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://njmotors.in/sitemap.xml

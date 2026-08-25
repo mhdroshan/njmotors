@@ -1,0 +1,753 @@
+[
+  {
+    "id": "urban-sprint",
+    "name": "Urban Sprint",
+    "tagline": "The Sleek Everyday Commuter",
+    "category": "Daily Commute",
+    "badge": "Best Seller",
+    "price": "₹54,999",
+    "numericPrice": 54999,
+    "range": "75 - 85 km",
+    "rangeKm": 85,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion (Portable)",
+    "batteryCapacity": "60V 24Ah Advanced LFP",
+    "motor": "250W High-Torque BLDC Waterproof Motor",
+    "chargingTime": "3.5 - 4 Hours",
+    "brakes": "Front Disc / Rear Drum with E-ABS",
+    "tyres": "90/90-10 Tubeless All-Weather Tyres",
+    "payload": "160 kg",
+    "weight": "68 kg",
+    "groundClearance": "170 mm",
+    "warranty": "3 Years Battery & 1 Year Motor Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Urban Sprint is engineered for college students and everyday city commuters. Featuring a lightweight aerodynamic frame, quick portable charging, and high-tensile alloy wheels, it offers unmatched reliability with zero fuel expenses and no registration paperwork.",
+    "colors": [
+      { "name": "Midnight Blue", "hex": "#1d4ed8", "image": "assets/images/b2.png" },
+      { "name": "Royal Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Silver Ice", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Racing Yellow", "hex": "#eab308", "image": "assets/images/y1.png" }
+    ],
+    "features": [
+      "No Driving License or Helmet Test Required",
+      "Portable Battery with Carry Handle (Charge Indoors)",
+      "Digital High-Contrast Color LCD Dashboard",
+      "Fast USB 2.4A Mobile Phone Charger",
+      "Keyless Push-Button Start with Anti-Theft Alarm",
+      "Reverse Assist Drive Mode for Easy Parking",
+      "All-LED Headlamps with Signature DRLs",
+      "Front Glove Box & Utility Luggage Hook"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h (Govt. Approved Non-RTO)",
+        "Certified Range": "85 km per charge",
+        "Motor Power": "250 Watt Waterproof BLDC",
+        "Gradeability / Climb": "12 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 24Ah Smart Lithium-ion",
+        "Battery Placement": "Portable Under-seat (Detachable)",
+        "Charging Time": "3.5 - 4 Hours to 100%",
+        "Charger Type": "60V 6A Smart Micro-controller with Auto-cut",
+        "Power Consumption": "~1.2 Units per Full Charge (approx. ₹8)"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Hydraulic Disc + Rear Drum with E-ABS",
+        "Suspension": "Front Telescopic Hydraulic / Rear Dual Spring Shockers",
+        "Wheel Type": "10-inch Rust-Free Alloy Wheels",
+        "Tyre Type": "Tubeless Heavy Duty",
+        "Lighting": "Full LED Dual Projector Headlamp, LED Tail & Turn Signals"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "68 kg (Battery Included)",
+        "Carrying Capacity": "160 kg (2 Adults)",
+        "Ground Clearance": "170 mm (Pothole Friendly)",
+        "Under-seat Storage": "18 Litres (Fits Helmets & Bags)",
+        "Boot Light & USB": "Yes (Included)"
+      }
+    }
+  },
+  {
+    "id": "urban-glide",
+    "name": "Urban Glide",
+    "tagline": "Smooth, Silent & Effortless Cruising",
+    "category": "Comfort Rider",
+    "badge": "Customer Choice",
+    "price": "₹58,499",
+    "numericPrice": 58499,
+    "range": "80 - 90 km",
+    "rangeKm": 90,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion (Portable)",
+    "batteryCapacity": "60V 26Ah Smart BMS Battery",
+    "motor": "250W Ultra-Quiet BLDC Motor",
+    "chargingTime": "4 Hours",
+    "brakes": "Front Disc / Rear Drum",
+    "tyres": "10-inch Anti-Skid Tubeless",
+    "payload": "165 kg",
+    "weight": "70 kg",
+    "groundClearance": "175 mm",
+    "warranty": "3 Years Comprehensive Battery Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Urban Glide offers plush dual-density seating, extra legroom, and premium telescopic suspension that glides over city potholes with ease. Ideal for professionals and family errand runs.",
+    "colors": [
+      { "name": "Metallic Ice Grey", "hex": "#475569", "image": "assets/images/g1.png" },
+      { "name": "Royal Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Ocean Blue", "hex": "#2563eb", "image": "assets/images/b2.png" },
+      { "name": "Sunset Yellow", "hex": "#eab308", "image": "assets/images/y1.png" }
+    ],
+    "features": [
+      "Zero RTO Registration & Zero Road Tax",
+      "Ergonomic Long Padded Cushion Seat",
+      "Regenerative Braking for Range Extension",
+      "Central Remote Locking with Find-My-Scooter",
+      "USB Phone Fast-Charging Socket",
+      "Spacious Flat Floorboard for Groceries & Bags",
+      "Twin Rear Hydraulic Shock Absorbers",
+      "High Visibility LED Wrap-around Taillight"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h (Govt. Approved Non-RTO)",
+        "Certified Range": "90 km per charge",
+        "Motor Power": "250 Watt BLDC Hub Motor",
+        "Gradeability": "13 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 26Ah Smart Lithium LFP with Active Thermal Management",
+        "Battery Placement": "Detachable Under-seat",
+        "Charging Time": "3.5 - 4 Hours",
+        "Charger Type": "Smart Auto Cut-Off Charger",
+        "Electricity Cost": "₹0.14 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Hydraulic Disc & Rear Drum",
+        "Suspension": "Heavy Duty Telescopic Front / Dual Spring Rear",
+        "Wheel Type": "Diamond-Cut Alloy Wheels",
+        "Tyre Type": "Tubeless 90/100-10",
+        "Lighting": "Full LED Headlamp with Halo Ring"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "70 kg",
+        "Carrying Capacity": "165 kg",
+        "Ground Clearance": "175 mm",
+        "Under-seat Storage": "20 Litres",
+        "Boot Space": "Deep Helmet Compartment"
+      }
+    }
+  },
+  {
+    "id": "urban-cruiser",
+    "name": "Urban Cruiser",
+    "tagline": "Premium Comfort with Extended 110km Range",
+    "category": "Long Range",
+    "badge": "Max Range",
+    "price": "₹67,999",
+    "numericPrice": 67999,
+    "range": "100 - 110 km",
+    "rangeKm": 110,
+    "topSpeed": "25 km/h",
+    "batteryType": "Dual-Ready Lithium-ion",
+    "batteryCapacity": "60V 34Ah Heavy Duty Lithium",
+    "motor": "250W High Efficiency Hub Motor",
+    "chargingTime": "4.5 Hours",
+    "brakes": "Dual Disc Brakes (Front & Rear)",
+    "tyres": "10-inch Extra Grip Tubeless",
+    "payload": "180 kg",
+    "weight": "74 kg",
+    "groundClearance": "180 mm",
+    "warranty": "3 Years On Battery + 1 Year Vehicle",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Designed for maximum endurance, Urban Cruiser packs a massive 34Ah battery delivering up to 110 km per single charge. With dual hydraulic disc brakes and superior road presence, it is the flagship luxury model of Urban Bikes.",
+    "colors": [
+      { "name": "Midnight Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Stealth Navy Blue", "hex": "#1e3a8a", "image": "assets/images/b2.png" },
+      { "name": "Titanium Grey", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Solar Yellow", "hex": "#eab308", "image": "assets/images/y1.png" }
+    ],
+    "features": [
+      "Extended 110 KM Range for Inter-City & Long Commutes",
+      "Dual Disc Brakes for Instant Stopping Power",
+      "Digital 7-Inch Color Multifunction Display",
+      "Cruiser Style Wide Handlebar & Floor Rest",
+      "Dual USB Ports with Quick Charge 3.0",
+      "Anti-Theft Wheel Motor Lock System",
+      "Heavy Duty Pillion Backrest Included",
+      "High Ground Clearance (180mm) for Rough Roads"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "110 km per charge",
+        "Motor Power": "250 Watt Tuned High-Efficiency BLDC",
+        "Gradeability": "15 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 34Ah High-Energy Density Lithium Battery",
+        "Battery Weight": "12.5 kg (Removable)",
+        "Charging Time": "4 - 4.5 Hours",
+        "Charger Type": "60V 8A Fast Charger with Surge Protection",
+        "Cost per 100km": "Under ₹15"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front & Rear Hydraulic Disc Brakes + CBS",
+        "Suspension": "Heavy-Duty Telescopic Front + Nitrogen-Charged Rear",
+        "Wheel Type": "Cast Aluminium Alloy 10-inch",
+        "Tyre Type": "Wide Profile Anti-Skid Tubeless",
+        "Lighting": "Full LED Projector with Cornering Illumination"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "74 kg",
+        "Carrying Capacity": "180 kg",
+        "Ground Clearance": "180 mm",
+        "Under-seat Storage": "22 Litres",
+        "Included Accessories": "Pillion Backrest, Floor Mat, Front Basket Hook"
+      }
+    }
+  },
+  {
+    "id": "urban-bolt",
+    "name": "Urban Bolt",
+    "tagline": "Sporty Styling Meets Pure Electric Efficiency",
+    "category": "Sport",
+    "badge": "Sport Edition",
+    "price": "₹59,999",
+    "numericPrice": 59999,
+    "range": "80 - 90 km",
+    "rangeKm": 90,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion",
+    "batteryCapacity": "60V 28Ah High Discharge Lithium",
+    "motor": "250W Quick-Response BLDC Motor",
+    "chargingTime": "3.5 Hours",
+    "brakes": "Front Disc / Rear Drum",
+    "tyres": "90/90-10 Sport Grip Tubeless",
+    "payload": "160 kg",
+    "weight": "69 kg",
+    "groundClearance": "172 mm",
+    "warranty": "3 Years Battery Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Featuring aggressive aerodynamic body panels, dynamic split LED headlights, and lightning quick throttle response, Urban Bolt brings sports bike styling to the non-license electric segment.",
+    "colors": [
+      { "name": "Racing Yellow", "hex": "#eab308", "image": "assets/images/y1.png" },
+      { "name": "Electric Blue", "hex": "#2563eb", "image": "assets/images/b2.png" },
+      { "name": "Deep Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Graphite Grey", "hex": "#475569", "image": "assets/images/g1.png" }
+    ],
+    "features": [
+      "Aggressive Sport Decals & Carbon-Pattern Trims",
+      "Split LED Dual Eye Headlamps with DRLs",
+      "Instant Electronic Torque Delivery",
+      "Keyless Remote with Push-To-Start",
+      "USB Quick-Charge Port",
+      "Electronic Reverse Assist Gear",
+      "Front Disc Brake with Heat Dissipation Rotor",
+      "Digital Cockpit with Speed, Trip, & Battery Bars"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "90 km per charge",
+        "Motor Power": "250 Watt Peak-Tuned BLDC",
+        "Gradeability": "14 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 28Ah Lithium-ion Fast-Charge Ready",
+        "Battery Placement": "Central Weight-Balanced Under-seat",
+        "Charging Time": "3.5 Hours",
+        "Charger Type": "60V 6A Fast Smart Charger",
+        "Running Cost": "₹0.13 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Petal Disc Brake + Rear Heavy Duty Drum",
+        "Suspension": "Sport-Tuned Telescopic / Rear Monoshock Assist",
+        "Wheel Type": "Sport 5-Spoke Alloy",
+        "Tyre Type": "Tubeless 90/90-10",
+        "Lighting": "Full LED Front and Rear"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "69 kg",
+        "Carrying Capacity": "160 kg",
+        "Ground Clearance": "172 mm",
+        "Under-seat Storage": "19 Litres"
+      }
+    }
+  },
+  {
+    "id": "urban-eco",
+    "name": "Urban Eco",
+    "tagline": "The Smartest Budget EV for Daily Rides",
+    "category": "Budget Friendly",
+    "badge": "Value Pick",
+    "price": "₹47,999",
+    "numericPrice": 47999,
+    "range": "65 - 75 km",
+    "rangeKm": 75,
+    "topSpeed": "25 km/h",
+    "batteryType": "Graphene / Lead-Carbon or Lithium Option",
+    "batteryCapacity": "48V 28Ah Graphene Battery",
+    "motor": "250W Eco-Optimized BLDC Motor",
+    "chargingTime": "5 - 6 Hours",
+    "brakes": "Front & Rear Heavy-Duty Drum",
+    "tyres": "3.00-10 Tubeless Tyres",
+    "payload": "150 kg",
+    "weight": "76 kg",
+    "groundClearance": "165 mm",
+    "warranty": "1 Year Battery / 1 Year Motor Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Urban Eco is the most affordable electric scooter in the lineup. Built for students, neighborhood errands, and short-distance commuting, it delivers remarkable cost savings with minimal initial investment.",
+    "colors": [
+      { "name": "Metallic Grey", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Burgundy Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Navy Blue", "hex": "#1d4ed8", "image": "assets/images/b2.png" }
+    ],
+    "features": [
+      "Lowest Purchase Price & Running Cost in Segment",
+      "Zero Maintenance Graphene Battery Architecture",
+      "Standard 3-Pin Home Wall Socket Charging",
+      "Sturdy Tubular Steel Body Frame",
+      "Easy-To-Read LED Battery Status Indicator",
+      "Large Front Basket Attachment Ready",
+      "Low Seat Height (740mm) - Easy for Everyone",
+      "Non-RTO Certified: No Registration or Road Tax"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "75 km per charge",
+        "Motor Power": "250 Watt Energy-Saver BLDC",
+        "Gradeability": "10 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "48V 28Ah High Capacity Graphene / Lead-Carbon",
+        "Battery Placement": "Fixed Low-Center Floorboard Pack",
+        "Charging Time": "5 - 6 Hours",
+        "Charger Type": "48V Auto-Cut Smart Charger",
+        "Units per Charge": "0.9 Units (~ ₹6 per 75 km)"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front & Rear Synchronized Drum Brakes",
+        "Suspension": "Front Telescopic / Rear Heavy Duty Coils",
+        "Wheel Type": "Steel Hub with Alloy Cover",
+        "Tyre Type": "Tubeless 3.00-10",
+        "Lighting": "Bright LED Headlamp & Tail Lamp"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "76 kg",
+        "Carrying Capacity": "150 kg",
+        "Ground Clearance": "165 mm",
+        "Under-seat Storage": "16 Litres"
+      }
+    }
+  },
+  {
+    "id": "urban-flash",
+    "name": "Urban Flash",
+    "tagline": "Ultra-Lightweight & Agile City Navigator",
+    "category": "Lightweight",
+    "badge": "Easy Rider",
+    "price": "₹52,999",
+    "numericPrice": 52999,
+    "range": "70 - 80 km",
+    "rangeKm": 80,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion (Portable)",
+    "batteryCapacity": "48V 26Ah Quick-Swap Lithium",
+    "motor": "250W High-Efficiency BLDC Motor",
+    "chargingTime": "3 Hours",
+    "brakes": "Front Disc / Rear Drum",
+    "tyres": "90/90-10 Tubeless",
+    "payload": "150 kg",
+    "weight": "62 kg",
+    "groundClearance": "170 mm",
+    "warranty": "3 Years Lithium Battery Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Weighing only 62 kg, Urban Flash is the lightest electric scooter in the lineup. Effortless to balance, park, and maneuver in congested streets, it is a favorite among women, senior citizens, and beginners.",
+    "colors": [
+      { "name": "Vibrant Yellow", "hex": "#eab308", "image": "assets/images/y1.png" },
+      { "name": "Ocean Blue", "hex": "#2563eb", "image": "assets/images/b2.png" },
+      { "name": "Ice Grey", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Ruby Red", "hex": "#881337", "image": "assets/images/12.png" }
+    ],
+    "features": [
+      "Ultra-Lightweight 62kg Body - Maximum Maneuverability",
+      "Super Fast 3-Hour Rapid Charging",
+      "Portable Battery Pack - Weighs Just 7.5 kg",
+      "Low Seat Height & Comfortable Ergonomics",
+      "Front Disc Brake with E-ABS",
+      "Digital Speedometer & Trip Display",
+      "Anti-Theft Central Lock with Audio Siren",
+      "Integrated Bag Hook & Phone Pocket"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "80 km per charge",
+        "Motor Power": "250 Watt Waterproof BLDC",
+        "Gradeability": "11 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "48V 26Ah Fast-Charge Lithium-ion",
+        "Battery Weight": "7.5 kg (Super Easy to Carry)",
+        "Charging Time": "3 - 3.5 Hours",
+        "Charger Type": "Smart 48V 6A Charger",
+        "Running Cost": "₹0.12 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Disc + Rear Drum with Regenerative Braking",
+        "Suspension": "Hydraulic Telescopic Front / Dual Coil Rear",
+        "Wheel Type": "10-inch Alloy Wheels",
+        "Tyre Type": "Tubeless City Grip",
+        "Lighting": "LED Headlamp with Integrated Blinkers"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "62 kg",
+        "Carrying Capacity": "150 kg",
+        "Ground Clearance": "170 mm",
+        "Under-seat Storage": "17 Litres"
+      }
+    }
+  },
+  {
+    "id": "urban-pulse",
+    "name": "Urban Pulse",
+    "tagline": "Modern Tech & Dynamic Electric Power",
+    "category": "Tech Edition",
+    "badge": "Smart EV",
+    "price": "₹62,499",
+    "numericPrice": 62499,
+    "range": "85 - 95 km",
+    "rangeKm": 95,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion",
+    "batteryCapacity": "60V 30Ah Smart LFP Battery",
+    "motor": "250W Intelligent BLDC Motor",
+    "chargingTime": "4 Hours",
+    "brakes": "Dual Disc Brakes",
+    "tyres": "90/90-12 Large Alloy Tubeless",
+    "payload": "170 kg",
+    "weight": "72 kg",
+    "groundClearance": "180 mm",
+    "warranty": "3 Years Battery & Motor Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Equipped with 12-inch large alloy wheels, Bluetooth connectivity display, and dual disc brakes, Urban Pulse delivers a superior riding experience with contemporary styling and high tech features.",
+    "colors": [
+      { "name": "Tech Cobalt Blue", "hex": "#1d4ed8", "image": "assets/images/b2.png" },
+      { "name": "Cyber Yellow", "hex": "#eab308", "image": "assets/images/y1.png" },
+      { "name": "Classic Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Titanium Grey", "hex": "#64748b", "image": "assets/images/g1.png" }
+    ],
+    "features": [
+      "Large 12-Inch Wheels for Superior Highway & Pothole Stability",
+      "Full Digital Smart Dashboard with Battery Health Monitor",
+      "Dual Disc Brakes with Electronic Braking System",
+      "USB Quick-Charge 3.0 Port for Smartphones",
+      "Keyless Smart Key Fob with Remote Start",
+      "Electronic Reverse Drive Mode",
+      "Aerodynamic LED Headlamp with Projector Lens",
+      "3 Years Comprehensive Warranty"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "95 km per charge",
+        "Motor Power": "250 Watt High-Efficiency Motor",
+        "Gradeability": "14 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 30Ah Smart Lithium LFP with Active Balancing",
+        "Battery Placement": "Portable Lockable Compartment",
+        "Charging Time": "3.5 - 4 Hours",
+        "Charger Type": "60V 6A Intelligent Micro-cut Charger",
+        "Running Cost": "₹0.14 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front & Rear Hydraulic Disc Brakes",
+        "Suspension": "Upright Telescopic Front / Heavy Duty Rear Shockers",
+        "Wheel Type": "12-Inch Diamond-Finish Alloy Wheels",
+        "Tyre Type": "Tubeless 90/90-12 All-Terrain",
+        "Lighting": "Full LED Signature Lighting Suite"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "72 kg",
+        "Carrying Capacity": "170 kg",
+        "Ground Clearance": "180 mm",
+        "Under-seat Storage": "20 Litres"
+      }
+    }
+  },
+  {
+    "id": "urban-breeze",
+    "name": "Urban Breeze",
+    "tagline": "Effortless Comfort for All Generations",
+    "category": "Family & Senior",
+    "badge": "Comfort First",
+    "price": "₹53,999",
+    "numericPrice": 53999,
+    "range": "75 - 85 km",
+    "rangeKm": 85,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion",
+    "batteryCapacity": "60V 24Ah Portable Lithium",
+    "motor": "250W Gentle Acceleration BLDC Motor",
+    "chargingTime": "3.5 Hours",
+    "brakes": "Front Disc / Rear Drum",
+    "tyres": "90/100-10 Tubeless",
+    "payload": "160 kg",
+    "weight": "67 kg",
+    "groundClearance": "170 mm",
+    "warranty": "3 Years Battery Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Crafted with extra-cushioned seating, smooth progressive throttle response, and a low step-through frame, Urban Breeze is the most approachable and relaxed ride for family members of all ages.",
+    "colors": [
+      { "name": "Royal Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Metallic Ice Blue", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Deep Blue", "hex": "#1e3a8a", "image": "assets/images/b2.png" },
+      { "name": "Sunburst Yellow", "hex": "#eab308", "image": "assets/images/y1.png" }
+    ],
+    "features": [
+      "Low Step-Through Frame for Easy Mount & Dismount",
+      "Gentle & Smooth Throttle Calibration (Zero Jerks)",
+      "Extra Wide Ultra-Padded Cushion Seat",
+      "Safety Side-Stand Motor Cut-Off Sensor",
+      "Detachable Portable Battery for Easy Home Charging",
+      "Large Storage Front Basket + Under-Seat Boot",
+      "Front Disc Brake with E-ABS Assistance",
+      "Zero Registration, Zero License Requirement"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "85 km per charge",
+        "Motor Power": "250 Watt Smooth-Torque BLDC",
+        "Gradeability": "12 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 24Ah Smart Lithium LFP Pack",
+        "Battery Weight": "9 kg (Portable)",
+        "Charging Time": "3.5 Hours",
+        "Charger Type": "60V 5A Smart Automatic Cut-off",
+        "Running Cost": "₹0.13 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Disc + Rear Drum with Safety Cut-off",
+        "Suspension": "Soft-Tuned Front Telescopic & Rear Dual Shocks",
+        "Wheel Type": "10-inch Rust-Proof Alloy Wheels",
+        "Tyre Type": "Tubeless 90/100-10",
+        "Lighting": "Bright LED Headlight with Daylight Running Light"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "67 kg",
+        "Carrying Capacity": "160 kg",
+        "Ground Clearance": "170 mm",
+        "Under-seat Storage": "18 Litres",
+        "Seat Height": "735 mm (Accessible)"
+      }
+    }
+  },
+  {
+    "id": "urban-commuter-pro",
+    "name": "Urban Commuter Pro",
+    "tagline": "Heavy Duty Range with Maximum Utility & Storage",
+    "category": "Heavy Duty / Delivery",
+    "badge": "Heavy Duty",
+    "price": "₹64,999",
+    "numericPrice": 64999,
+    "range": "95 - 105 km",
+    "rangeKm": 105,
+    "topSpeed": "25 km/h",
+    "batteryType": "Dual Battery Compatible Lithium",
+    "batteryCapacity": "60V 32Ah High Capacity Lithium",
+    "motor": "250W High-Torque BLDC Motor",
+    "chargingTime": "4.5 Hours",
+    "brakes": "Front Disc / Rear Drum Heavy Duty",
+    "tyres": "10-inch Reinforced Puncture-Resistant",
+    "payload": "190 kg",
+    "weight": "75 kg",
+    "groundClearance": "185 mm",
+    "warranty": "3 Years Battery & Motor Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Built for delivery partners, daily professionals, and heavy cargo utility, the Commuter Pro boasts a reinforced steel chassis, massive 190kg carrying payload, and dual-rack carrying capability.",
+    "colors": [
+      { "name": "Midnight Fusion Blue", "hex": "#1e3a8a", "image": "assets/images/b2.png" },
+      { "name": "Commercial Yellow", "hex": "#eab308", "image": "assets/images/y1.png" },
+      { "name": "Heavy Steel Grey", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Classic Maroon", "hex": "#881337", "image": "assets/images/12.png" }
+    ],
+    "features": [
+      "Massive 190 kg Payload Capacity (Heavy Duty Frame)",
+      "Large Flat Floorboard with Bag Locking Hook",
+      "Rear Heavy-Duty Carrier Rack Compatible for Crates/Bags",
+      "High Ground Clearance (185mm) for Heavy Loads",
+      "Reinforced Front & Rear Dual Shocks",
+      "Dual Mobile Charging Ports (USB-A + Type-C)",
+      "High Capacity 32Ah Lithium Battery for 105km Range",
+      "Certified CMVR Non-RTO: No Commercial Permit Needed"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "105 km per charge",
+        "Motor Power": "250 Watt Heavy-Torque BLDC Motor",
+        "Gradeability": "15 Degrees Under Full Load"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 32Ah Heavy-Duty Lithium Battery",
+        "Battery Placement": "Lockable Quick-Access Tray",
+        "Charging Time": "4 - 4.5 Hours",
+        "Charger Type": "60V 7A Smart Fast Charger",
+        "Daily Savings": "Save up to ₹250/day compared to petrol"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Hydraulic Disc + Reinforced Rear Drum",
+        "Suspension": "Heavy-Duty Telescopic Front / Multi-Stage Dual Rear",
+        "Wheel Type": "Reinforced Alloy Wheels",
+        "Tyre Type": "Heavy-Duty 6-Ply Tubeless",
+        "Lighting": "High-Lumen Dual LED Headlamp"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "75 kg",
+        "Carrying Capacity": "190 kg",
+        "Ground Clearance": "185 mm",
+        "Under-seat Storage": "22 Litres + Flat Cargo Bed"
+      }
+    }
+  },
+  {
+    "id": "urban-aero",
+    "name": "Urban Aero",
+    "tagline": "Aerodynamic Futurism for the Modern Road",
+    "category": "Futuristic Design",
+    "badge": "New Arrival",
+    "price": "₹61,999",
+    "numericPrice": 61999,
+    "range": "85 - 95 km",
+    "rangeKm": 95,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion",
+    "batteryCapacity": "60V 28Ah High Energy Cell",
+    "motor": "250W Low-Drag BLDC Motor",
+    "chargingTime": "3.5 Hours",
+    "brakes": "Front Disc / Rear Disc",
+    "tyres": "90/90-10 Low Rolling Resistance Tubeless",
+    "payload": "165 kg",
+    "weight": "68 kg",
+    "groundClearance": "175 mm",
+    "warranty": "3 Years Battery Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Urban Aero combines sculpted wind-tunnel body contours with next-generation LED lightbars and an ultra-modern floating instrument display for riders who love futuristic styling.",
+    "colors": [
+      { "name": "Aerodynamic Yellow", "hex": "#eab308", "image": "assets/images/y1.png" },
+      { "name": "Sonic Blue", "hex": "#1d4ed8", "image": "assets/images/b2.png" },
+      { "name": "Platinum Silver", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Ruby Red", "hex": "#881337", "image": "assets/images/12.png" }
+    ],
+    "features": [
+      "Futuristic Edge-to-Edge Front LED Horizon Lightbar",
+      "Floating Minimalist Digital Cockpit",
+      "Aerodynamic Wind Deflector Body Paneling",
+      "Front & Rear Dual Disc Brakes",
+      "Smart Keyless Ignition with Push Button",
+      "Fast 3.5 Hour Portable Lithium Charging",
+      "USB Phone Fast-Charging Ready",
+      "Zero RTO Formalities & 100% Street Legal"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "95 km per charge",
+        "Motor Power": "250 Watt Aerodynamically Calibrated BLDC",
+        "Gradeability": "13 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "60V 28Ah Premium Lithium Pack",
+        "Battery Placement": "Detachable Portable Under-seat",
+        "Charging Time": "3.5 Hours",
+        "Charger Type": "60V 6A Smart Auto-Cut Charger",
+        "Running Cost": "₹0.13 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front & Rear Hydraulic Disc Brakes",
+        "Suspension": "Precision Telescopic Front / Dual Gas-Assisted Rear",
+        "Wheel Type": "Aerodynamic Multi-Spoke Alloy Wheels",
+        "Tyre Type": "Tubeless Low-Resistance",
+        "Lighting": "Full Horizon LED Lightbar & Sleek Tail Light"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "68 kg",
+        "Carrying Capacity": "165 kg",
+        "Ground Clearance": "175 mm",
+        "Under-seat Storage": "20 Litres"
+      }
+    }
+  },
+  {
+    "id": "urban-zing",
+    "name": "Urban Zing",
+    "tagline": "Vibrant, Stylish & Fun Youth Mobility",
+    "category": "Youth & Trend",
+    "badge": "Trending",
+    "price": "₹51,499",
+    "numericPrice": 51499,
+    "range": "70 - 80 km",
+    "rangeKm": 80,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium-ion",
+    "batteryCapacity": "48V 26Ah Fast-Charge Lithium",
+    "motor": "250W Peppy BLDC Motor",
+    "chargingTime": "3 Hours",
+    "brakes": "Front Disc / Rear Drum",
+    "tyres": "90/90-10 Tubeless",
+    "payload": "155 kg",
+    "weight": "64 kg",
+    "groundClearance": "170 mm",
+    "warranty": "3 Years Battery Warranty",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Urban Zing is the ultimate trendy ride for students and young adventurers. Featuring energetic two-tone paint jobs, peppy city acceleration, and zero paperwork requirements.",
+    "colors": [
+      { "name": "Metallic Ice Blue", "hex": "#64748b", "image": "assets/images/g1.png" },
+      { "name": "Vibrant Yellow", "hex": "#eab308", "image": "assets/images/y1.png" },
+      { "name": "Royal Maroon", "hex": "#881337", "image": "assets/images/12.png" },
+      { "name": "Deep Ocean Blue", "hex": "#1d4ed8", "image": "assets/images/b2.png" }
+    ],
+    "features": [
+      "Vibrant Dual-Tone Color Schemes",
+      "No Driving License Required - Perfect for College & Coaching",
+      "Rapid 3-Hour Full Charge via Any Standard Wall Socket",
+      "Color Digital Speedometer with Real-time Range",
+      "Anti-Theft Remote Alarm with Wheel Lock",
+      "Mobile Phone Charger USB Port",
+      "Front Hydraulic Disc Brake for Quick Stopping",
+      "Low Maintenance & High Durability"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range": "80 km per charge",
+        "Motor Power": "250 Watt Responsive BLDC",
+        "Gradeability": "12 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Technology": "48V 26Ah Portable Lithium-ion",
+        "Battery Weight": "8 kg (Easy Lift)",
+        "Charging Time": "3 Hours",
+        "Charger Type": "Smart 48V 6A Charger",
+        "Running Cost": "₹0.12 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Disc + Rear Drum with E-ABS",
+        "Suspension": "Front Hydraulic Telescopic & Rear Coil Shocks",
+        "Wheel Type": "10-inch Sport Black Alloy Wheels",
+        "Tyre Type": "Tubeless All-Season",
+        "Lighting": "Bright Dual LED Projector Lights"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "64 kg",
+        "Carrying Capacity": "155 kg",
+        "Ground Clearance": "170 mm",
+        "Under-seat Storage": "18 Litres"
+      }
+    }
+  }
+]

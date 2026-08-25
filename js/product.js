@@ -9,7 +9,7 @@ let allScootersList = [];
 
 async function loadProductDetails() {
   const urlParams = new URLSearchParams(window.location.search);
-  const scooterId = urlParams.get('id') || 'urban-sprint';
+  const scooterId = urlParams.get('id') || 'urban-legend';
 
   // 1. If window.SCOOTERS_DATA is already present, use it
   if (window.SCOOTERS_DATA && Array.isArray(window.SCOOTERS_DATA) && window.SCOOTERS_DATA.length > 0) {
@@ -71,12 +71,12 @@ function renderProductPage(scooter) {
   if (titleEl) titleEl.textContent = scooter.name;
   if (taglineEl) taglineEl.textContent = scooter.tagline;
   if (priceEl) priceEl.textContent = scooter.price;
-  if (badgeEl) badgeEl.textContent = scooter.badge || 'Urban Bikes';
+  if (badgeEl) badgeEl.textContent = scooter.badge || 'Urban eBikes';
   if (descEl) descEl.textContent = scooter.description;
 
   // Gallery & Image
   const mainImg = document.getElementById('pdpMainImg');
-  const defaultImg = (scooter.colors && scooter.colors[0]) ? scooter.colors[0].image : 'assets/images/b2.png';
+  const defaultImg = (scooter.colors && scooter.colors[0]) ? scooter.colors[0].image : 'assets/images/legend-maroon.png';
   if (mainImg) {
     mainImg.src = defaultImg;
     mainImg.alt = `${scooter.name} Electric Scooter - NJ Motors`;
@@ -102,8 +102,8 @@ function renderProductPage(scooter) {
   const primaryWaBtn = document.getElementById('pdpWhatsAppBtn');
   const testRideWaBtn = document.getElementById('pdpTestRideBtn');
 
-  const inquiryMessage = `Hi NJ Motors, I am interested in the Urban Bikes ${scooter.name} (Price: ${scooter.price}, Range: ${scooter.range}). Please share the on-road price, color availability, and financing options!`;
-  const testRideMessage = `Hi NJ Motors, I would like to book a free test ride for the Urban Bikes ${scooter.name} (No License Required). Please let me know the showroom timing and address.`;
+  const inquiryMessage = `Hi NJ Motors, I am interested in the Urban eBikes ${scooter.name} (Price: ${scooter.price}, Range: ${scooter.range}). Please share the on-road price, color availability, and financing options!`;
+  const testRideMessage = `Hi NJ Motors, I would like to book a free test ride for the Urban eBikes ${scooter.name} (No License Required). Please let me know the showroom timing and address.`;
 
   if (primaryWaBtn) {
     primaryWaBtn.href = `https://wa.me/919072430473?text=${encodeURIComponent(inquiryMessage)}`;

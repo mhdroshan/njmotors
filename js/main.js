@@ -6,7 +6,7 @@
 const NJ_MOTORS = {
   PHONE: '919072430473',
   DEALERSHIP_NAME: 'NJ Motors',
-  BRAND_NAME: 'Urban Bikes',
+  BRAND_NAME: 'Urban eBikes',
 
   /**
    * Builds an encoded WhatsApp URL with optional pre-filled text

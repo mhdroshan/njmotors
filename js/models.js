@@ -54,16 +54,21 @@ function renderScooterGrid() {
 
   // Filter list
   let filtered = allScooters.filter(scooter => {
+    const bType = scooter.batteryType ? scooter.batteryType.toLowerCase() : '';
+    const cat = scooter.category ? scooter.category.toLowerCase() : '';
+    const tag = scooter.tagline ? scooter.tagline.toLowerCase() : '';
+
     const matchCategory = (currentCategory === 'all') || 
-      (currentCategory === 'lithium' && scooter.batteryType.toLowerCase().includes('lithium')) ||
-      (currentCategory === 'graphene' && scooter.batteryType.toLowerCase().includes('graphene')) ||
+      (currentCategory === 'lithium' && (bType.includes('lithium') || bType.includes('li-ion'))) ||
       (currentCategory === 'long-range' && scooter.rangeKm >= 95) ||
-      (currentCategory === 'sport' && (scooter.category.toLowerCase().includes('sport') || scooter.category.toLowerCase().includes('tech')));
+      (currentCategory === 'sport' && (cat.includes('sport') || cat.includes('performance') || tag.includes('speed'))) ||
+      (currentCategory === 'commute' && (cat.includes('commute') || cat.includes('daily') || cat.includes('comfort') || cat.includes('efficiency')));
 
     const matchSearch = currentSearch === '' || 
       scooter.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
       scooter.tagline.toLowerCase().includes(currentSearch.toLowerCase()) ||
-      scooter.batteryType.toLowerCase().includes(currentSearch.toLowerCase());
+      bType.includes(currentSearch.toLowerCase()) ||
+      cat.includes(currentSearch.toLowerCase());
 
     return matchCategory && matchSearch;
   });

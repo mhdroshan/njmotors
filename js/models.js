@@ -107,13 +107,13 @@ function renderScooterGrid() {
     const waText = encodeURIComponent(`Hi NJ Motors, I want to inquire about the Urban eBikes ${scooter.name} with Lithium Battery (Price: ${scooter.price}, Range: ${liVar.range}). Please share Doorstep Home Delivery details!`);
     const waUrl = `https://wa.me/916238669531?text=${waText}`;
     const defaultColor = scooter.colors && scooter.colors.length > 0 ? scooter.colors[0] : null;
-    const initialImg = defaultColor ? defaultColor.image : 'assets/images/b2.png';
+    const initialImg = scooter.image || (defaultColor ? defaultColor.image : 'assets/images/legend.png');
 
     const colorDots = scooter.colors ? scooter.colors.map((c, idx) => `
       <span class="color-dot ${idx === 0 ? 'active' : ''}" 
             style="background-color: ${c.hex};" 
             title="${c.name}" 
-            onclick="changeCardColor(event, '${scooter.id}', '${c.image}')">
+            onclick="changeCardColor(event, '${scooter.id}')">
       </span>
     `).join('') : '';
 
@@ -203,15 +203,13 @@ function renderScooterGrid() {
   }).join('');
 }
 
-function changeCardColor(event, scooterId, newImg) {
-  event.preventDefault();
-  event.stopPropagation();
-  const card = document.getElementById(`card-${scooterId}`);
-  const img = document.getElementById(`img-${scooterId}`);
-  if (img) {
-    img.src = newImg;
+function changeCardColor(event, scooterId) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
   }
-  if (card) {
+  const card = document.getElementById(`card-${scooterId}`);
+  if (card && event && event.target) {
     const dots = card.querySelectorAll('.color-dot');
     dots.forEach(d => d.classList.remove('active'));
     event.target.classList.add('active');

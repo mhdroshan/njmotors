@@ -86,7 +86,7 @@ function renderProductPage(scooter) {
   const twitterUrl = document.getElementById('twitterUrl');
   if (twitterUrl) twitterUrl.setAttribute('content', canonicalUrl);
 
-  const defaultImg = (scooter.colors && scooter.colors[0]) ? scooter.colors[0].image : 'assets/images/legend-maroon.png';
+  const defaultImg = scooter.image || ((scooter.colors && scooter.colors[0]) ? scooter.colors[0].image : 'assets/images/legend.png');
   const fullImgUrl = `https://njmotors.in/${defaultImg}`;
   const ogImage = document.getElementById('ogImage');
   if (ogImage) ogImage.setAttribute('content', fullImgUrl);
@@ -158,6 +158,11 @@ function renderProductPage(scooter) {
           "@type": "PropertyValue",
           "name": "Warranty",
           "value": scooter.warranty || "3 Years (Lithium) / 1 Year (Graphene)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Complimentary Perks",
+          "value": "3 Free Periodic Maintenance Services Included + Free Safety Helmet"
         }
       ]
     };
@@ -196,18 +201,24 @@ function renderProductPage(scooter) {
 
     colorContainer.innerHTML = scooter.colors.map((c, idx) => `
       <button class="color-swatch-btn ${idx === 0 ? 'active' : ''}" 
+              data-color="${c.name}"
               style="background-color: ${c.hex};" 
               title="${c.name}" 
               aria-label="Select ${c.name} color"
-              onclick="selectPdpColor(this, '${c.name}', '${c.image}')">
+              onclick="selectPdpColor(this, '${c.name}', '${c.image || ''}')">
       </button>
     `).join('');
   }
+
+  // Initialize or Refresh PDP Image Zoom & Lightbox Inspector
+  initPdpImageZoom();
 
   // Render Features Checklist
   const featuresContainer = document.getElementById('pdpFeaturesContainer');
   if (featuresContainer && scooter.features) {
     const combinedFeatures = [
+      "3 Free Services Included (Periodic Maintenance Checkups & Doorstep Tune-ups)",
+      "Helmet will be free (Complimentary ISI certified safety helmet)",
       ...scooter.features,
       "Free Doorstep Home Delivery with Live Vehicle & Battery Demo",
       "Authorized Doorstep Home Service & Maintenance Support"
@@ -371,7 +382,7 @@ function updateQuickSpecsAndCTAs(scooter) {
   const testRideWaBtn = document.getElementById('pdpTestRideBtn');
 
   const batteryLabel = selectedBatteryType === 'lithium' ? 'Lithium Battery (3-Year Warranty, Fast Charging)' : 'Graphene Battery (1-Year Warranty, 6-7h Charge)';
-  const inquiryMessage = `Hi NJ Motors, I am interested in the Urban eBikes ${scooter.name} with ${batteryLabel} (Price: ${scooter.price}, Range: ${variant.range}). Please share details about Doorstep Home Delivery, on-road price, and financing options!`;
+  const inquiryMessage = `Hi NJ Motors, I am interested in the Urban eBikes ${scooter.name} with ${batteryLabel} (Price: ${scooter.price}, Range: ${variant.range}). Please share details about the 3 Free Services, Free Helmet, Doorstep Home Delivery, and on-road price!`;
   const testRideMessage = `Hi NJ Motors, I would like to book a free test ride (showroom or doorstep) for the Urban eBikes ${scooter.name} (${batteryLabel}). Please let me know the timing and availability.`;
 
   if (primaryWaBtn) {
@@ -496,15 +507,331 @@ function renderTechnicalSpecs(scooter) {
   specsContainer.innerHTML = html;
 }
 
-function selectPdpColor(btnElement, colorName, imgSrc) {
-  const mainImg = document.getElementById('pdpMainImg');
+function selectPdpColor(btnElement, colorName, colorImage) {
   const selectedColorName = document.getElementById('pdpSelectedColorName');
-  if (mainImg) mainImg.src = imgSrc;
   if (selectedColorName) selectedColorName.textContent = colorName;
 
-  const swatches = document.querySelectorAll('.color-swatch-btn');
-  swatches.forEach(s => s.classList.remove('active'));
-  if (btnElement) btnElement.classList.add('active');
+  const modalColorName = document.getElementById('pdpZoomColor');
+  if (modalColorName) modalColorName.textContent = colorName;
+
+  const swatches = document.querySelectorAll('.color-swatch-btn, .pdp-zoom-swatch-btn');
+  swatches.forEach(s => {
+    if (s.title === colorName || s.getAttribute('data-color') === colorName) {
+      s.classList.add('active');
+    } else {
+      s.classList.remove('active');
+    }
+  });
+
+  if (colorImage) {
+    const mainImg = document.getElementById('pdpMainImg');
+    if (mainImg) mainImg.src = colorImage;
+
+    const modalImg = document.getElementById('pdpZoomModalImg');
+    if (modalImg) modalImg.src = colorImage;
+  }
+}
+
+/* ==========================================================================
+   PDP Product Image Zoom & Lightbox Inspector Logic
+   ========================================================================== */
+
+let isZoomModalOpen = false;
+let zoomScale = 1.0;
+let zoomPanX = 0;
+let zoomPanY = 0;
+let isDraggingZoom = false;
+let dragStartX = 0;
+let dragStartY = 0;
+let initialPanX = 0;
+let initialPanY = 0;
+let lastTouchTime = 0;
+let initialPinchDistance = null;
+let initialPinchScale = 1.0;
+let isZoomInitialized = false;
+
+function initPdpImageZoom() {
+  const imgBox = document.getElementById('pdpMainImgBox');
+  const mainImg = document.getElementById('pdpMainImg');
+  const zoomStage = document.getElementById('pdpZoomStage');
+  const btnIn = document.getElementById('zoomBtnIn');
+  const btnOut = document.getElementById('zoomBtnOut');
+  const btnReset = document.getElementById('zoomBtnReset');
+  const btnClose = document.getElementById('zoomBtnClose');
+  const backdrop = document.getElementById('pdpZoomBackdrop');
+  const badge = document.getElementById('pdpZoomBadge');
+
+  if (!imgBox || !mainImg) return;
+
+  // 1. Desktop Hover Zoom on Main Image Box
+  imgBox.onmousemove = function(e) {
+    if (window.innerWidth <= 768) return; // disable hover zoom on touch devices
+    const rect = imgBox.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+    const y = Math.max(0, Math.min(100, ((e.clientY - rect.top) / rect.height) * 100));
+    mainImg.style.transformOrigin = `${x}% ${y}%`;
+    mainImg.style.transform = 'scale(2.2)';
+  };
+
+  imgBox.onmouseleave = function() {
+    mainImg.style.transform = 'scale(1)';
+    mainImg.style.transformOrigin = 'center center';
+  };
+
+  // 2. Click to open Lightbox Zoom Modal
+  imgBox.onclick = function() {
+    openPdpZoomModal();
+  };
+
+  imgBox.onkeydown = function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openPdpZoomModal();
+    }
+  };
+
+  if (badge) {
+    badge.onclick = function(e) {
+      e.stopPropagation();
+      openPdpZoomModal();
+    };
+  }
+
+  // Prevent multiple bindings
+  if (isZoomInitialized) return;
+  isZoomInitialized = true;
+
+  if (btnClose) btnClose.onclick = closePdpZoomModal;
+  if (backdrop) backdrop.onclick = closePdpZoomModal;
+  if (btnIn) btnIn.onclick = () => setZoomScale(zoomScale + 0.5);
+  if (btnOut) btnOut.onclick = () => setZoomScale(zoomScale - 0.5);
+  if (btnReset) btnReset.onclick = resetZoomModalState;
+
+  // Mouse Wheel Zoom on Stage
+  if (zoomStage) {
+    zoomStage.addEventListener('wheel', function(e) {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.35 : -0.35;
+      setZoomScale(zoomScale + delta);
+    }, { passive: false });
+
+    // Drag / Pan with Mouse
+    zoomStage.addEventListener('mousedown', function(e) {
+      if (zoomScale <= 1) return;
+      isDraggingZoom = true;
+      dragStartX = e.clientX;
+      dragStartY = e.clientY;
+      initialPanX = zoomPanX;
+      initialPanY = zoomPanY;
+      zoomStage.classList.add('is-dragging');
+    });
+
+    window.addEventListener('mousemove', function(e) {
+      if (!isDraggingZoom) return;
+      zoomPanX = initialPanX + (e.clientX - dragStartX);
+      zoomPanY = initialPanY + (e.clientY - dragStartY);
+      applyZoomCanvasTransform();
+    });
+
+    window.addEventListener('mouseup', function() {
+      if (isDraggingZoom) {
+        isDraggingZoom = false;
+        if (zoomStage) zoomStage.classList.remove('is-dragging');
+      }
+    });
+
+    // Double-click to toggle zoom
+    zoomStage.addEventListener('dblclick', function(e) {
+      e.preventDefault();
+      if (zoomScale > 1.2) {
+        resetZoomModalState();
+      } else {
+        setZoomScale(2.5);
+      }
+    });
+
+    // Touch Support (Drag, Double-tap, Pinch-to-zoom)
+    zoomStage.addEventListener('touchstart', function(e) {
+      if (e.touches.length === 1) {
+        const now = Date.now();
+        if (now - lastTouchTime < 300) {
+          // Double Tap detected
+          e.preventDefault();
+          if (zoomScale > 1.2) {
+            resetZoomModalState();
+          } else {
+            setZoomScale(2.5);
+          }
+          lastTouchTime = 0;
+          return;
+        }
+        lastTouchTime = now;
+
+        if (zoomScale > 1) {
+          isDraggingZoom = true;
+          dragStartX = e.touches[0].clientX;
+          dragStartY = e.touches[0].clientY;
+          initialPanX = zoomPanX;
+          initialPanY = zoomPanY;
+        }
+      } else if (e.touches.length === 2) {
+        // Pinch start
+        isDraggingZoom = false;
+        initialPinchDistance = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+        initialPinchScale = zoomScale;
+      }
+    }, { passive: false });
+
+    zoomStage.addEventListener('touchmove', function(e) {
+      if (e.touches.length === 1 && isDraggingZoom && zoomScale > 1) {
+        e.preventDefault();
+        zoomPanX = initialPanX + (e.touches[0].clientX - dragStartX);
+        zoomPanY = initialPanY + (e.touches[0].clientY - dragStartY);
+        applyZoomCanvasTransform();
+      } else if (e.touches.length === 2 && initialPinchDistance) {
+        e.preventDefault();
+        const currentDist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+        const scaleFactor = currentDist / initialPinchDistance;
+        setZoomScale(initialPinchScale * scaleFactor);
+      }
+    }, { passive: false });
+
+    zoomStage.addEventListener('touchend', function(e) {
+      if (e.touches.length < 2) {
+        initialPinchDistance = null;
+      }
+      if (e.touches.length === 0) {
+        isDraggingZoom = false;
+      }
+    });
+  }
+
+  // Keyboard Navigation
+  window.addEventListener('keydown', function(e) {
+    if (!isZoomModalOpen) return;
+    if (e.key === 'Escape') {
+      closePdpZoomModal();
+    } else if (e.key === '+' || e.key === '=') {
+      setZoomScale(zoomScale + 0.5);
+    } else if (e.key === '-' || e.key === '_') {
+      setZoomScale(zoomScale - 0.5);
+    } else if (e.key === '0') {
+      resetZoomModalState();
+    } else if (zoomScale > 1) {
+      const step = 40;
+      if (e.key === 'ArrowLeft') { zoomPanX += step; applyZoomCanvasTransform(); }
+      else if (e.key === 'ArrowRight') { zoomPanX -= step; applyZoomCanvasTransform(); }
+      else if (e.key === 'ArrowUp') { zoomPanY += step; applyZoomCanvasTransform(); }
+      else if (e.key === 'ArrowDown') { zoomPanY -= step; applyZoomCanvasTransform(); }
+    }
+  });
+}
+
+function openPdpZoomModal() {
+  const modal = document.getElementById('pdpZoomModal');
+  const mainImg = document.getElementById('pdpMainImg');
+  const modalImg = document.getElementById('pdpZoomModalImg');
+  const titleEl = document.getElementById('pdpZoomTitle');
+  const colorEl = document.getElementById('pdpZoomColor');
+  const currentColor = document.getElementById('pdpSelectedColorName')?.textContent || '';
+
+  if (!modal || !mainImg || !modalImg) return;
+
+  isZoomModalOpen = true;
+  modalImg.src = mainImg.src;
+
+  if (titleEl && currentScooter) {
+    const fullName = currentScooter.name.startsWith('Urban') ? currentScooter.name : `Urban ${currentScooter.name}`;
+    titleEl.textContent = fullName;
+  }
+  if (colorEl) {
+    colorEl.textContent = currentColor;
+  }
+
+  renderModalColorSwatches();
+  resetZoomModalState();
+
+  modal.style.display = 'flex';
+  requestAnimationFrame(() => {
+    modal.classList.add('active');
+  });
+  document.body.style.overflow = 'hidden';
+}
+
+function closePdpZoomModal() {
+  const modal = document.getElementById('pdpZoomModal');
+  if (!modal) return;
+
+  isZoomModalOpen = false;
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    if (!isZoomModalOpen) modal.style.display = 'none';
+  }, 250);
+}
+
+function setZoomScale(newScale) {
+  zoomScale = Math.min(4.0, Math.max(1.0, Math.round(newScale * 10) / 10));
+
+  if (zoomScale <= 1.0) {
+    zoomPanX = 0;
+    zoomPanY = 0;
+  }
+
+  const pill = document.getElementById('zoomLevelPill');
+  if (pill) pill.textContent = `${Math.round(zoomScale * 100)}%`;
+
+  const btnOut = document.getElementById('zoomBtnOut');
+  const btnIn = document.getElementById('zoomBtnIn');
+  if (btnOut) btnOut.style.opacity = zoomScale <= 1.0 ? '0.4' : '1';
+  if (btnIn) btnIn.style.opacity = zoomScale >= 4.0 ? '0.4' : '1';
+
+  const stage = document.getElementById('pdpZoomStage');
+  if (stage) {
+    stage.style.cursor = zoomScale > 1 ? 'grab' : 'default';
+  }
+
+  applyZoomCanvasTransform();
+}
+
+function resetZoomModalState() {
+  zoomPanX = 0;
+  zoomPanY = 0;
+  setZoomScale(1.0);
+}
+
+function applyZoomCanvasTransform() {
+  const canvas = document.getElementById('pdpZoomCanvas');
+  if (canvas) {
+    canvas.style.transform = `translate3d(${zoomPanX}px, ${zoomPanY}px, 0) scale(${zoomScale})`;
+  }
+}
+
+function renderModalColorSwatches() {
+  const container = document.getElementById('pdpZoomSwatches');
+  if (!container || !currentScooter || !currentScooter.colors) {
+    if (container) container.innerHTML = '';
+    return;
+  }
+
+  const currentColorName = document.getElementById('pdpSelectedColorName')?.textContent || '';
+
+  container.innerHTML = currentScooter.colors.map(c => `
+    <button type="button" 
+            class="pdp-zoom-swatch-btn ${c.name === currentColorName ? 'active' : ''}" 
+            data-color="${c.name}"
+            style="background-color: ${c.hex};" 
+            title="${c.name}" 
+            aria-label="Select ${c.name} color"
+            onclick="selectPdpColor(this, '${c.name}', '${c.image || ''}')">
+    </button>
+  `).join('');
 }
 
 function renderSimilarModels(current) {
@@ -513,7 +840,7 @@ function renderSimilarModels(current) {
 
   const others = allScootersList.filter(s => s.id !== current.id).slice(0, 3);
   container.innerHTML = others.map(s => {
-    const defaultColor = s.colors && s.colors[0] ? s.colors[0].image : 'assets/images/b2.png';
+    const defaultColor = s.image || (s.colors && s.colors[0] ? s.colors[0].image : 'assets/images/legend.png');
     const liVar = s.batteryVariants?.lithium || { range: '80 - 110 km', chargingTime: '3.5 - 4 Hours' };
     const waText = encodeURIComponent(`Hi NJ Motors, I want to inquire about the Urban eBikes ${s.name} with Lithium Battery (Price: ${s.price}, Range: ${liVar.range}).`);
     const waUrl = `https://wa.me/916238669531?text=${waText}`;

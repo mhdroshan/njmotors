@@ -66,22 +66,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Royal Maroon",
         "hex": "#881337",
-        "image": "assets/images/legend-maroon.png"
+        "image": "assets/images/legend.png"
       },
       {
         "name": "Ocean Blue",
         "hex": "#1d4ed8",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/legend.png"
       },
       {
         "name": "Titanium Grey",
         "hex": "#64748b",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/legend.png"
       },
       {
         "name": "Racing Yellow",
         "hex": "#eab308",
-        "image": "assets/images/y1.png"
+        "image": "assets/images/legend.png"
       }
     ],
     "features": [
@@ -125,7 +125,8 @@ window.SCOOTERS_DATA = [
         "Under-seat Storage": "18 Litres (Fits Helmets & Bags)",
         "Boot Space & USB": "Included with Fast 2.4A Charger"
       }
-    }
+    },
+    "image": "assets/images/legend.png"
   },
   {
     "id": "urban-fusion",
@@ -186,22 +187,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Crimson Red",
         "hex": "#dc2626",
-        "image": "assets/images/fusion-red.png"
+        "image": "assets/images/fusion.png"
       },
       {
         "name": "Midnight Blue",
         "hex": "#1e3a8a",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/fusion.png"
       },
       {
         "name": "Steel Grey",
         "hex": "#475569",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/fusion.png"
       },
       {
         "name": "Sunset Yellow",
         "hex": "#eab308",
-        "image": "assets/images/y1.png"
+        "image": "assets/images/fusion.png"
       }
     ],
     "features": [
@@ -244,7 +245,8 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "175 mm",
         "Under-seat Storage": "20 Litres"
       }
-    }
+    },
+    "image": "assets/images/fusion.png"
   },
   {
     "id": "urban-falcon",
@@ -305,22 +307,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Slate Grey",
         "hex": "#64748b",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/falcon.png"
       },
       {
         "name": "Pearl White",
         "hex": "#f8fafc",
-        "image": "assets/images/optima-white.png"
+        "image": "assets/images/falcon.png"
       },
       {
         "name": "Deep Maroon",
         "hex": "#881337",
-        "image": "assets/images/legend-maroon.png"
+        "image": "assets/images/falcon.png"
       },
       {
         "name": "Electric Blue",
         "hex": "#2563eb",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/falcon.png"
       }
     ],
     "features": [
@@ -363,7 +365,8 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "175 mm",
         "Under-seat Storage": "19 Litres"
       }
-    }
+    },
+    "image": "assets/images/falcon.png"
   },
   {
     "id": "urban-optima",
@@ -424,22 +427,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Metallic Maroon",
         "hex": "#881337",
-        "image": "assets/images/optima-maroon.png"
+        "image": "assets/images/optima.png"
       },
       {
         "name": "Glossy White",
         "hex": "#f8fafc",
-        "image": "assets/images/optima-white.png"
+        "image": "assets/images/optima.png"
       },
       {
         "name": "Ocean Blue",
         "hex": "#1d4ed8",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/optima.png"
       },
       {
         "name": "Titanium Grey",
         "hex": "#64748b",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/optima.png"
       }
     ],
     "features": [
@@ -482,11 +485,12 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "170 mm",
         "Under-seat Storage": "18 Litres"
       }
-    }
+    },
+    "image": "assets/images/optima.png"
   },
   {
     "id": "urban-phantom",
-    "name": "Phantom",
+    "name": "Phantom Pro",
     "tagline": "The Speed Of Phantom",
     "category": "Premium Commute",
     "badge": "Flagship",
@@ -543,22 +547,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Glacier White",
         "hex": "#ffffff",
-        "image": "assets/images/phantom-white.png"
+        "image": "assets/images/phantom-pro.png"
       },
       {
         "name": "Royal Blue",
         "hex": "#1e40af",
-        "image": "assets/images/phantom-blue.png"
+        "image": "assets/images/phantom-pro.png"
       },
       {
         "name": "Matte Titanium Grey",
         "hex": "#4b5563",
-        "image": "assets/images/phantom-grey.png"
+        "image": "assets/images/phantom-pro.png"
       },
       {
         "name": "Solar Yellow",
         "hex": "#eab308",
-        "image": "assets/images/y1.png"
+        "image": "assets/images/phantom-pro.png"
       }
     ],
     "features": [
@@ -601,7 +605,8 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "180 mm",
         "Under-seat Storage": "20 Litres"
       }
-    }
+    },
+    "image": "assets/images/phantom-pro.png"
   },
   {
     "id": "urban-phantom-plus",
@@ -667,17 +672,17 @@ window.SCOOTERS_DATA = [
       {
         "name": "Matte Titanium Grey",
         "hex": "#4b5563",
-        "image": "assets/images/phantom-grey.png"
+        "image": "assets/images/phantom-plus.png"
       },
       {
         "name": "Glacier White",
         "hex": "#ffffff",
-        "image": "assets/images/phantom-white.png"
+        "image": "assets/images/phantom-plus.png"
       },
       {
         "name": "Royal Blue",
         "hex": "#1e40af",
-        "image": "assets/images/phantom-blue.png"
+        "image": "assets/images/phantom-plus.png"
       }
     ],
     "features": [
@@ -720,7 +725,8 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "180 mm",
         "Under-seat Storage": "22 Litres"
       }
-    }
+    },
+    "image": "assets/images/phantom-plus.png"
   },
   {
     "id": "urban-phantom-gen-i",
@@ -786,17 +792,17 @@ window.SCOOTERS_DATA = [
       {
         "name": "Pearl White",
         "hex": "#ffffff",
-        "image": "assets/images/phantom-white.png"
+        "image": "assets/images/phantom-gen-i.png"
       },
       {
         "name": "Royal Blue",
         "hex": "#1e40af",
-        "image": "assets/images/phantom-blue.png"
+        "image": "assets/images/phantom-gen-i.png"
       },
       {
         "name": "Titanium Grey",
         "hex": "#4b5563",
-        "image": "assets/images/phantom-grey.png"
+        "image": "assets/images/phantom-gen-i.png"
       }
     ],
     "features": [
@@ -839,7 +845,8 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "180 mm",
         "Under-seat Storage": "20 Litres"
       }
-    }
+    },
+    "image": "assets/images/phantom-gen-i.png"
   },
   {
     "id": "urban-destiny",
@@ -905,17 +912,17 @@ window.SCOOTERS_DATA = [
       {
         "name": "Ocean Blue",
         "hex": "#1d4ed8",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/destiny-red.png"
       },
       {
         "name": "Metallic Grey",
         "hex": "#64748b",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/destiny-red.png"
       },
       {
         "name": "Pearl White",
         "hex": "#ffffff",
-        "image": "assets/images/optima-white.png"
+        "image": "assets/images/destiny-red.png"
       }
     ],
     "features": [
@@ -958,11 +965,12 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "170 mm",
         "Under-seat Storage": "19 Litres"
       }
-    }
+    },
+    "image": "assets/images/destiny-red.png"
   },
   {
     "id": "i-cruze",
-    "name": "I cruze",
+    "name": "Icruze",
     "tagline": "Comfortable Elegance For Everyday Travel",
     "category": "Comfort & Family",
     "badge": "Family Choice",
@@ -1019,22 +1027,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Ruby Red",
         "hex": "#b91c1c",
-        "image": "assets/images/destiny-red.png"
+        "image": "assets/images/icruze.png"
       },
       {
         "name": "Ocean Blue",
         "hex": "#1d4ed8",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/icruze.png"
       },
       {
         "name": "Metallic Grey",
         "hex": "#64748b",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/icruze.png"
       },
       {
         "name": "Pearl White",
         "hex": "#ffffff",
-        "image": "assets/images/optima-white.png"
+        "image": "assets/images/icruze.png"
       }
     ],
     "features": [
@@ -1077,11 +1085,12 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "170 mm",
         "Under-seat Storage": "19 Litres"
       }
-    }
+    },
+    "image": "assets/images/icruze.png"
   },
   {
     "id": "raptor-2-0",
-    "name": "Raptor 2.0",
+    "name": "Raptor",
     "tagline": "Comfortable Elegance For Everyday Travel",
     "category": "Comfort & Family",
     "badge": "Family Choice",
@@ -1138,22 +1147,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Ruby Red",
         "hex": "#b91c1c",
-        "image": "assets/images/destiny-red.png"
+        "image": "assets/images/raptor.png"
       },
       {
         "name": "Ocean Blue",
         "hex": "#1d4ed8",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/raptor.png"
       },
       {
         "name": "Metallic Grey",
         "hex": "#64748b",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/raptor.png"
       },
       {
         "name": "Pearl White",
         "hex": "#ffffff",
-        "image": "assets/images/optima-white.png"
+        "image": "assets/images/raptor.png"
       }
     ],
     "features": [
@@ -1196,7 +1205,8 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "170 mm",
         "Under-seat Storage": "19 Litres"
       }
-    }
+    },
+    "image": "assets/images/raptor.png"
   },
   {
     "id": "symphony",
@@ -1262,17 +1272,17 @@ window.SCOOTERS_DATA = [
       {
         "name": "Midnight Blue",
         "hex": "#1e3a8a",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/fusion-red.png"
       },
       {
         "name": "Steel Grey",
         "hex": "#475569",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/fusion-red.png"
       },
       {
         "name": "Sunset Yellow",
         "hex": "#eab308",
-        "image": "assets/images/y1.png"
+        "image": "assets/images/fusion-red.png"
       }
     ],
     "features": [
@@ -1315,7 +1325,8 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "175 mm",
         "Under-seat Storage": "20 Litres"
       }
-    }
+    },
+    "image": "assets/images/fusion-red.png"
   },
   {
     "id": "despro",
@@ -1376,22 +1387,22 @@ window.SCOOTERS_DATA = [
       {
         "name": "Ruby Red",
         "hex": "#b91c1c",
-        "image": "assets/images/destiny-red.png"
+        "image": "assets/images/despro.png"
       },
       {
         "name": "Ocean Blue",
         "hex": "#1d4ed8",
-        "image": "assets/images/legend-blue.png"
+        "image": "assets/images/despro.png"
       },
       {
         "name": "Metallic Grey",
         "hex": "#64748b",
-        "image": "assets/images/falcon-grey.png"
+        "image": "assets/images/despro.png"
       },
       {
         "name": "Pearl White",
         "hex": "#ffffff",
-        "image": "assets/images/optima-white.png"
+        "image": "assets/images/despro.png"
       }
     ],
     "features": [
@@ -1434,6 +1445,127 @@ window.SCOOTERS_DATA = [
         "Ground Clearance": "170 mm",
         "Under-seat Storage": "19 Litres"
       }
-    }
+    },
+    "image": "assets/images/despro.png"
+  },
+  {
+    "id": "aspire",
+    "name": "Aspire",
+    "tagline": "Sleek Comfort & Everyday Performance",
+    "category": "Daily Commute",
+    "badge": "New Arrival",
+    "price": "₹73,999",
+    "numericPrice": 73999,
+    "range": "80 - 110 km (Lithium) / 65 - 80 km (Graphene)",
+    "rangeKm": 110,
+    "topSpeed": "25 km/h",
+    "batteryType": "Lithium / Graphene Battery Options",
+    "batteryCapacity": "60V 24Ah Lithium-ion / Graphene",
+    "motor": "BLDC Smooth-Torque Hub Motor",
+    "chargingTime": "3.5 - 4 Hrs (Lithium) / 6 - 7 Hrs (Graphene)",
+    "brakes": "Front Disc / Rear Drum",
+    "tyres": "90/100-10 Tubeless Tyres",
+    "payload": "160 kg",
+    "weight": "68 kg",
+    "groundClearance": "170 mm",
+    "warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+    "licenseRequired": "No Driving License Required (CMVR Non-RTO)",
+    "description": "Urban Aspire is built for modern commuters seeking elegance, extended battery range, and smooth handling with zero driving license required.",
+    "batteryVariants": {
+      "lithium": {
+        "name": "Lithium Battery (Smart BMS)",
+        "type": "Advanced Smart Lithium Pack",
+        "range": "80 - 110 km",
+        "rangeKm": 110,
+        "certifiedRange": "80 - 110 km per charge",
+        "chargingTime": "3.5 - 4 Hours",
+        "fastCharging": true,
+        "chargingFeature": "Fast Charging (3.5 - 4 Hrs to 100%)",
+        "warranty": "3 Years Warranty",
+        "warrantyYears": 3,
+        "technology": "60V 24Ah Smart Lithium-ion",
+        "placement": "Detachable Under-seat",
+        "powerConsumption": "~1.2 Units per Full Charge"
+      },
+      "graphene": {
+        "name": "Graphene Battery",
+        "type": "High-Durability Graphene Pack",
+        "range": "65 - 80 km",
+        "rangeKm": 80,
+        "certifiedRange": "65 - 80 km per charge",
+        "chargingTime": "6 - 7 Hours",
+        "fastCharging": false,
+        "chargingFeature": "Standard Charging (6 - 7 Hrs, No Fast Charge)",
+        "warranty": "1 Year Warranty",
+        "warrantyYears": 1,
+        "technology": "60V Heavy-Duty Graphene Battery",
+        "placement": "Under-seat Compartment",
+        "powerConsumption": "~1.4 Units per Full Charge"
+      }
+    },
+    "colors": [
+      {
+        "name": "Ruby Red",
+        "hex": "#b91c1c",
+        "image": "assets/images/aspire.png"
+      },
+      {
+        "name": "Ocean Blue",
+        "hex": "#1d4ed8",
+        "image": "assets/images/aspire.png"
+      },
+      {
+        "name": "Metallic Grey",
+        "hex": "#64748b",
+        "image": "assets/images/aspire.png"
+      },
+      {
+        "name": "Pearl White",
+        "hex": "#ffffff",
+        "image": "assets/images/aspire.png"
+      }
+    ],
+    "features": [
+      "Keyless Entry & Remote Start",
+      "Anti-Theft System with Alert Buzzer",
+      "USB Mobile Fast-Charging Socket",
+      "Cruise Control for Fatigue-Free Cruising",
+      "Reverse Assist Gear",
+      "3-Speed Electronic Throttle Modes",
+      "Lithium (3-Yr) or Graphene (1-Yr) Battery Options",
+      "Extra Padded Ergonomic Cushion Seat"
+    ],
+    "specs": {
+      "Performance": {
+        "Top Speed": "25 km/h",
+        "Certified Range (Lithium)": "80 - 110 km per charge",
+        "Certified Range (Graphene)": "65 - 80 km per charge",
+        "Motor Power": "BLDC Smooth-Torque Hub Motor",
+        "Controller": "48/60V Smart Wireless Controller",
+        "Gradeability": "12 Degrees"
+      },
+      "Battery & Electricals": {
+        "Battery Options": "Lithium Battery (Smart BMS) / Graphene Battery",
+        "Battery Warranty": "3 Years (Lithium) / 1 Year (Graphene)",
+        "Charging Time": "3.5 - 4 Hours (Lithium Fast Charge) / 6 - 7 Hours (Graphene)",
+        "Fast Charging": "Supported on Lithium / Standard on Graphene",
+        "Charger Type": "Auto Cut-Off Smart Charger",
+        "Electricity Cost": "₹0.13 per km"
+      },
+      "Chassis & Safety": {
+        "Braking System": "Front Disc & Rear Drum",
+        "Suspension": "Front Telescopic / Rear Hydraulic",
+        "Wheel Type": "Alloy Wheels",
+        "Tyre Size": "90/100-10 Tubeless",
+        "Lighting": "LED Projector Headlamp"
+      },
+      "Dimensions & Utility": {
+        "Kerb Weight": "68 kg",
+        "Carrying Capacity": "160 kg",
+        "Ground Clearance": "170 mm",
+        "Under-seat Storage": "19 Litres"
+      }
+    },
+    "image": "assets/images/aspire.png"
   }
 ];

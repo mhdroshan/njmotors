@@ -210,7 +210,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-white);
   box-shadow: 0 4px 14px var(--primary-glow);
 }
-
+.btn-primary-outline{
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background-color: rgb(22, 22, 22);
+}
 .btn-primary:hover {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
@@ -330,6 +334,11 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   object-fit: contain;
 }
+@media (max-width: 768px) {
+  .brand-logo-img {
+    height: 36px;
+  }
+}
 
 .nav-links {
   display: flex;
@@ -394,7 +403,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   height: 100%;
   background: var(--bg-surface);
-  z-index: 1001;
+  z-index: 10000;
   padding: 2rem 1.5rem;
   box-shadow: var(--shadow-xl);
   transition: right var(--transition-smooth);
@@ -492,8 +501,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(74, 222, 128, 0.3);
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.70rem;
+  font-weight: 600;
 }
 
 .hero-badge.highlight {
@@ -715,6 +724,9 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
+  @media (max-width: 390px) {
+    grid-template-columns: repeat(auto-fill, minmax(90%, 1fr));  
+  }
 }
 
 .scooter-card {
@@ -775,7 +787,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scooter-img {
-  max-height: 180px;
+  height: 230px;
+  object-fit: cover;
   width: auto;
   transition: transform var(--transition-smooth);
   filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.08));
@@ -817,6 +830,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-full);
   padding: 0.25rem 0.35rem 0.25rem 0.75rem;
   margin-bottom: 1rem;
+  @media (max-width: 350px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .card-battery-toggle-lbl {
@@ -875,6 +892,9 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1fr 1fr;
   gap: 0.6rem;
   margin-bottom: 1.4rem;
+  @media (max-width: 390px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .spec-pill {
@@ -921,6 +941,11 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+}
+@media (max-width: 400px) {
+  .card-footer {
+    flex-direction: column;
+  }
 }
 
 .scooter-price-box {
@@ -2765,6 +2790,60 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .doorstep-section {
+    padding: 3.5rem 0;
+  }
+  
+  .doorstep-card-header {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  
+  .doorstep-card-title {
+    font-size: 1.5rem;
+  }
+
+  .doorstep-promo-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .doorstep-promo-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doorstep-section {
+    padding: 2.5rem 0;
+  }
+  
+  .doorstep-card-title {
+    font-size: 1.35rem;
+  }
+  
+  .doorstep-footer-note {
+    align-items: flex-start;
+  }
+  
+  .doorstep-footer-note span {
+    margin-top: 0.15rem;
+  }
+  
+  .doorstep-feature-row {
+    gap: 0.65rem;
+  }
+}
+
 .d-none{
   display: none;
+}
+.call-now-cta{
+  background-color: #000000bb;
+}
+.call-now-cta span{
+  padding: 0 3px;
 }
